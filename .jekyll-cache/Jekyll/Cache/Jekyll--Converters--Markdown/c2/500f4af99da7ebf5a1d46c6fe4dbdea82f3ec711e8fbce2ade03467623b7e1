@@ -1,0 +1,65 @@
+I"
+<td width="300">
+    <br />
+    <table width="300">
+      <tr>
+        <td><img style="float:left" src="/images/github.png" width="30px" height="30px" />
+          <p1><a href="https://github.com/Xiaofu-Jin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Xiaofu Jin</a></p1>
+        </td>
+      </tr>
+      <tr>
+        <td><img style="float:left" src="/images/icons8-google-scholar-48.png" width="30px" height="30px" />
+          <p1><a href="https://scholar.google.com/citations?user=AuZH5MMAAAAJ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Google Scholar</a></p1>
+        </td>
+      </tr>
+      <tr>
+        <td><img style="float:left" src="/images/email.png" width="28px" height="28px" />
+          <p1><a href="mailto:suffvier@gmail.com">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suffvier@gmail.com</a></p1>
+        </td>
+      </tr>
+       <tr>
+        <td><img style="float:left" src="/images/icons8-linkedin-30.png" width="30px" height="30px" />
+          <p1><a href="https://www.linkedin.com/in/xiaofu-jin-75932b111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinkedIn</a></p1>
+        </td>
+      </tr>
+      <tr>
+        <td><img style="float:left" src="/images/curriculum-vitae.png" width="30px" height="30px" />
+          <p1><a href="/CV.pdf">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Curriculum Vitae</a></p1>
+        </td>
+      </tr>
+     </table>
+
+<!--
+<a id="github-link"
+       class="icon" 
+       href="https://github.com/Xiaofu-Jin">
+       <img style="display:inline-block;margin:0;padding:0;" src="/images/github.png" width="30px" height="30px"/>@Xiaofu Jin
+</a><br>
+<a id="scholar"
+       class="icon" 
+       href="https://scholar.google.com/citations?user=AuZH5MMAAAAJ">
+       <img style="display:inline-block;margin:0;padding:0;" src="/images/icons8-google-scholar-48.png" width="35px" height="35px">Google Scholar
+</a> 
+
+<a id="search-link"
+    class="icon"
+    href="mailto:suffvier@gmail.com">
+    <img style="display:inline-block;margin:0;padding:0;" src="/images/email.png" width="30px" height="30px" > &nbsp;suffvier@gmail.com
+</a><br>
+
+<a id="search-link"
+    class="icon"
+    href="https://www.linkedin.com/in/xiaofu-jin-75932b111">
+    <img style="display:inline-block;margin:0;padding:0;" src="/images/icons8-linkedin-30.png" width="30px" height="30px" > &nbsp;Linkedin
+</a><br>
+
+<a id="github-download-link"
+    class="icon" 
+    href="/CV.pdf">
+    <img style="display:inline-block;margin:0;padding:0;" src="/images/curriculum-vitae.png" width="30px" height="30px"> &nbsp;Curriculum Vitae
+</a>
+</-->
+
+  
+</td>
+:ET

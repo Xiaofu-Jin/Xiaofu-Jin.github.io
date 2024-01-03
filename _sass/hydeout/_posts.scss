@@ -18,10 +18,12 @@
 .post-title a {
   color: $heading-color;
 }
-
+h1.page-title {
+  font-size: 1.6rem;
+}
 h2.post-title,
 h2.page-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .post-tags a {
@@ -45,6 +47,7 @@ h2.page-title {
   h3 {
     margin-top: 0;
   }
+
 
   li small {
     color: #999;
@@ -81,13 +84,105 @@ article + *,
   margin-top: -0.5rem;
 }
 
-.post,
-.page {
-  .content li + li {
-    margin-top: 0.25rem;
-  }
+// .post,
+// .page {
+//   .content li + li {
+//     margin-top: 0.25rem;
+//   }
+// }
+// li::before {
+//   content: "—— "; /* 自定义内容，包括破折号和空格 */
+//   color: #0070dd; /* 破折号的颜色 */
+//   font-weight: bold; /* 可选：设置字体加粗 */
+// }
+li {
+  margin: 10px;
 }
 
 button.disqus-load {
   margin-top: 1em;
+}
+
+.pub {
+display: flex;
+border-radius: 0.5rem;
+padding: 1rem;
+box-shadow: 0 0.2rem 0.5rem #00000026 !important;
+.thumbnail {
+  display: flex;
+  //position: relative;
+  min-width: 18vw;
+  overflow: hidden;
+  //justify-content: center; 
+  align-items: center;
+  //vertical-align: middle;
+  img {
+      max-width: 100%;
+      width: 18vw;
+      min-width: 18vw;
+      border-radius: 5px;
+      background-color: white;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      
+  }
+  margin-right: 2vw;
+}
+
+.thumbnail:hover img, .thumbnail:focus img {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.publications {
+  display: block;
+   
+  h3 {
+    font-family: 'Source Sans Pro', 'Open Sans', 'Times New Roman', serif;
+    margin: 0em;
+      font-weight: 400;
+      max-height: 600px;
+      overflow: hidden;
+      color: #282828;
+      padding: 0;
+      font-size: 0.9rem;
+  
+  }
+
+  .venue {
+    margin-bottom: .4rem;
+    color: #6e6e6e;
+    font-size: 0.7rem;
+  }
+
+  .author {
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 80;
+    font-size: 0.8rem;
+  }
+}
+}
+
+@media (max-width: 700px) {
+  .pub {
+    display: block;
+    .thumbnail {
+      //position: relative;
+      min-width: 10vw;
+      overflow: hidden;
+      justify-content: center; 
+      align-items: center;
+      //vertical-align: middle;
+      img {
+          max-width: 100%;
+          width: 50%;
+  }
+}
+  }
 }

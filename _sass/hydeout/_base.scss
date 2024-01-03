@@ -50,10 +50,12 @@ a {
 
 img {
   border-radius: 5px;
-  display: block;
+  border-style: none;
+  //display: block;
   height: auto; // prevent max-width from squishing images with defined height
   margin: 0 0 1rem;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 table {
@@ -126,4 +128,11 @@ input[type='submit'] {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.filterDiv {
+	float: left;
+  text-align: center;
+  margin: 2px;
+  display: none;
 }

@@ -1,6 +1,14 @@
 ---
 # Use a comment to ensure Jekyll reads the file to be transformed into CSS later
 # only main files contain this front matter, not partials.
+# $sidebar-bg-color: #fff
+#$sidebar-bg-color: -webkit-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+#$sidebar-bg-color: -moz-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+#$sidebar-bg-color: -o-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+#$sidebar-bg-color: -ms-linear-gradient(left, #19111f 0%, #2c1e37 100%)
+#$sidebar-bg-color: linear-gradient(to right, #19111f 0%, #2c1e37 100%)
 ---
+$sidebar-bg-color: #19111f;
+$link-color: #51048b;
 
 @import "hydeout";

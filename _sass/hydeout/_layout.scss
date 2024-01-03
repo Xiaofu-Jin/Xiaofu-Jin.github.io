@@ -35,7 +35,7 @@ body {
 #sidebar {
   flex: 0 0 auto;
   padding: $section-spacing;
-
+  text-align: center;
   .site-title {
     font-family: 'Abril Fatface', serif;
     font-size: $large-font-size;
@@ -71,13 +71,13 @@ body {
 
 // Hide secondary nav content in sidebar
 // Hide lead paragraph in sidebar
-#sidebar {
-  header ~ *,
-  header ~ nav,
-  p.lead {
-    display: none;
-  }
-}
+// #sidebar {
+//   header ~ *,
+//   header ~ nav,
+// //   p.lead {
+// //     display: none;
+// //   }
+//  }
 
 // Make header elements blend into sidebar / background
 .container > header {
@@ -103,32 +103,32 @@ body {
   Mobile view for home page)
 ----------------------------------------------------------- */
 
-.home #sidebar {
+// #sidebar {
 
-  // Center sidebar content
-  text-align: center;
+//   // Center sidebar content
+//   text-align: center;
 
-  // Bigger title
-  .site-title {
-    font-size: 3.25rem;
-  }
+//   // Bigger title
+//   .site-title {
+//     font-size: 1.5rem;
+//   }
 
-  // Show secondary nav content + lead
-  header ~ *,
-  p.lead {
-    display: block;
-  }
+//   // Show secondary nav content + lead
+//   header ~ *,
+//   p.lead {
+//     display: block;
+//   }
 
-  header ~ nav {
-    display: flex;
-  }
+//   header ~ nav {
+//     display: flex;
+//   }
 
-  // Slightly more bottom padding to compensate for heading not match 100% of
-  // line-height on top
-  > *:last-child {
-    margin-bottom: 0.5rem;
-  }
-}
+//   // Slightly more bottom padding to compensate for heading not match 100% of
+//   // line-height on top
+//   > *:last-child {
+//     margin-bottom: 0.5rem;
+//   }
+// }
 
 /* -----------------------------------------------------------
   Tablet / Desktop view
@@ -181,7 +181,7 @@ body {
     }
 
     .site-title {
-      font-size: 3.25rem;
+      font-size: 1.5rem;
       .back-arrow { display: none; }
     }
 
@@ -299,7 +299,7 @@ body {
 
 #sidebar nav > .icon {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 0.25em;
 }
 
