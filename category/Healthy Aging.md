@@ -3,7 +3,9 @@ layout: category
 title:  Healthy Aging
 excerpt_separator:  <!--more-->
 ---
-
+<div class="message">
+Selected Publications
+</div>
 <div class="pub">
       <div class="thumbnail">
         <img src="/images/CHI23.jpg" />

@@ -2,6 +2,9 @@
 layout: category
 title: VR & AR
 ---
+<div class="message">
+Selected Publications
+</div>
 
 <div class="pub">
       <div class="thumbnail">
