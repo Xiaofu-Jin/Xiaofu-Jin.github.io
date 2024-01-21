@@ -13,7 +13,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author">Xian Wang#,Xiaoyu Mo#,Lik-Hang Lee,Xiaoying Wei, <b>Xiaofu Jin</b>, Mingming Fan, Pan Hui</div>
         <div>
-        <span class="venue">In Proceedings of ACM Multimedia 2023 (MM'23)
+        <span class="venue">In ACM Multimedia (MM'23)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/MM23_Meditation_VR_CameraReady4">PDF  | </a></span></div>
@@ -30,7 +30,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author">Yuru Huang#, Jingling Zhang#, <strong>Xiaofu Jin</strong>, Mingming Fan</div>
         <div>
-        <span class="venue">In the 25th International ACM SIGACCESS Conference on Computers and Accessibility (ASSESTS'23)
+        <span class="venue">In ACM Computers and Accessibility (ASSESTS'23)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/MM23_Meditation_VR_CameraReady4">PDF  | </a></span></div>
@@ -64,7 +64,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author"><strong>Xiaofu Jin</strong>, Xiaozhu Hu, Xiaoying Wei, Mingming Fan</div>
         <div>
-        <span class="venue">In ACM Conference on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT'22)
+        <span class="venue">In ACM Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT'22)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/Ubicomp22-Synapse.pdf">PDF  | </a>
@@ -82,7 +82,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author">Xiaoying Wei#, <strong>Xiaofu Jin#</strong>, Mingming Fan</div>
         <div>
-        <span class="venue">In The Tenth International Symposium of Chinese CHI, ACM
+        <span class="venue">In ACM Chinese CHI (ChineseCHI'22)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/ChineseCHI22_Literature_Review_Social_VR.pdf">PDF |</a></span></div>
@@ -99,7 +99,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author"><strong>Xiaofu Jin</strong>, Mingming Fan</div>
         <div>
-        <span class="venue">In ACM Conference on  Computers and Accessibility (ASSETS' 22)
+        <span class="venue">In ACM Computers and Accessibility (ASSETS' 22)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/ASSETS22_Older_Adults_Banking.pdf">PDF |</a></span></div>
@@ -116,7 +116,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author">Emily Kuang, <strong>Xiaofu Jin</strong>, Mingming Fan</div>
         <div>
-        <span class="venue">In ACM Conference on Human Factors in Computing Systems (CHI'22)
+        <span class="venue">In ACM Human Factors in Computing Systems (CHI'22)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/CHI22-UX-Survey.pdf">PDF |</a></span></div>
@@ -133,7 +133,7 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author"><strong>Xiaofu Jin</strong>, Emily Kuang, Mingming Fan</div>
         <div>
-        <span class="venue">In ACM Conference on Designing Interactive Systems (DIS'21)
+        <span class="venue">In ACM Designing Interactive Systems (DIS'21)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/DIS21_Older_Adults_Banking_Survey.pdf">PDF | </a>

@@ -13,8 +13,8 @@ excerpt_separator:  <!--more-->
         <small>PhD candidate of Academy OF Interdisciplinary Studies</small>
         <small>2022-current</small>
         </div>
-        <small>Advisor: <a href="https://www.mingmingfan.com/">Dr. Mingming Fan</a> 
-               Co-advisor: <a href="http://huamin.org/" >Dr. Huamin Qu </a>
+        <small>Advisor: <a href="https://www.mingmingfan.com/">Prof. Mingming Fan</a> 
+               Co-advisor: <a href="http://huamin.org/" >Prof. Huamin Qu </a>
         </small>
 </li>
 
@@ -24,10 +24,10 @@ excerpt_separator:  <!--more-->
         <p>Rochester, NY, USA</p>
         </div>
         <div style="display: flex; justify-content: space-between;">
-        <small>PhD student of Computational and Information Science</small>
+        <small>PhD candidate of Computational and Information Science</small>
         <small>2020-2021</small>
         </div>
-        <small>Advisor: <a href="https://www.mingmingfan.com/">Dr. Mingming Fan</a> 
+        <small>Advisor: <a href="https://www.mingmingfan.com/">Prof. Mingming Fan</a> 
         </small>
 </li>
 <li>
