@@ -22,6 +22,10 @@
   we want the sidebar or header to stretch.
 */
 
+html {
+  background-color: #19111f;
+}
+
 body {
   background-attachment: fixed;
   background-color: $sidebar-bg-color;
@@ -56,6 +60,7 @@ body {
 // Container is flexbox as well -- we want content div to stretch and fill
 .container {
   display: flex;
+  text-align: left;
   flex: 1 1 auto;
   flex-direction: column;
 
@@ -147,6 +152,12 @@ body {
     }
   }
 
+  .mid-wrapper {
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
+
   /* Undo mobile CSS */
 
   #sidebar,
@@ -160,7 +171,7 @@ body {
   }
 
   #sidebar {
-    position: fixed;
+    position: absolute;
 
     // Attach to bottom or top of window
     @if $sidebar-sticky {
