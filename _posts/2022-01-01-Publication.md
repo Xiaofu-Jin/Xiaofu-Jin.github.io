@@ -11,12 +11,47 @@ excerpt_separator:  <!--more-->
        <div> 
         <h3>Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults Explore and Learn Smartphone Applications</h3>
         </div>
-        <div class="author"></b>Xiaofu Jin, Wai Tong, Xiaoying Wei, Xian Wang, Emily Kuang, Xiaoyu Mo, Huamin Qu, Mingming Fan</div>
+        <div class="author"><b>Xiaofu Jin</b>, Wai Tong, Xiaoying Wei, Xian Wang, Emily Kuang, Xiaoyu Mo, Huamin Qu, Mingming Fan</div>
         <div>
         <span class="venue">In ACM CHI (CHI'24)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/CHI24_AR.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/CHI24-DC.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>Empowering Autonomous Digital Learning for Older Adults</h3>
+        </div>
+        <div class="author"><b>Xiaofu Jin</b></div>
+        <div>
+        <span class="venue">In ACM CHI (CHI'24 Extended Abstract)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/CHI24_DC.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/ISEA24.jpg" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>“Hidden Incidents of Pet Food”: Portraying Taurine Deficiency in Cats</h3>
+        </div>
+        <div class="author">Ziwei Wu, <b>Xiaofu Jin</b>, Danlu Fei, Yifang Wang, Kang Zhang</div>
+        <div>
+        <span class="venue">In International Symposium on Electronic Art (ISEA'24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/ISEA24_Taurine.pdf">PDF  | </a></span></div>
       </div>
 </div>
 
