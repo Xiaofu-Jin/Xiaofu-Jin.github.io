@@ -5,7 +5,42 @@ excerpt_separator:  <!--more-->
 ---
 <div class="pub">
       <div class="thumbnail">
-        <img src="/images/CHI24.png" />
+        <img src="/images/CHI25-Danmu.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>DanmuA11y: Making Time-Synced On-Screen Video Comments (Danmu) Accessible to Blind and Low Vision Users via
+Multi-Viewer Audio Discussions</h3>
+        </div>
+        <div class="author">Shuchang Xu, <strong>Xiaofu Jin</strong>, Huamin Qu, Yukang Yan</div>
+        <div>
+        <span class="venue">In ACM CHI Conference on Human Factors in Computing Systems (CHI'25)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/CHI25-Danmu.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/MHCI24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>EarMonitor: Non-clinical Assessment of Ear Health Conditions Using a Low-cost Endoscope Camera on Smartphones</h3>
+        </div>
+        <div class="author"><strong>Xiaofu Jin</strong>, Mingming Fan</div>
+        <div>
+        <span class="venue">In Proceedings of the ACM on Human-Computer Interaction, Volume 8, Issue MHCI (MHCI'24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/MHCI24.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/CHI24AR.png" />
       </div>
       <div class="publications">
        <div> 
@@ -13,10 +48,10 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author"><b>Xiaofu Jin</b>, Wai Tong, Xiaoying Wei, Xian Wang, Emily Kuang, Xiaoyu Mo, Huamin Qu, Mingming Fan</div>
         <div>
-        <span class="venue">In ACM CHI (CHI'24)
+        <span class="venue">In ACM CHI Conference on Human Factors in Computing Systems (CHI'24)
         </span>
         </div>
-        <div><span class="venue"><a href="/papers/CHI24_AR.pdf">PDF  | </a></span></div>
+        <div><span class="venue"><a href="/papers/CHI24AR.pdf">PDF  | </a></span></div>
       </div>
 </div>
 
@@ -30,13 +65,80 @@ excerpt_separator:  <!--more-->
         </div>
         <div class="author"><b>Xiaofu Jin</b></div>
         <div>
-        <span class="venue">In ACM CHI (CHI'24 Extended Abstract)
+        <span class="venue">In ACM CHI Conference on Human Factors in Computing Systems (CHI'24 Extended Abstract)
         </span>
         </div>
         <div><span class="venue"><a href="/papers/CHI24_DC.pdf">PDF  | </a></span></div>
       </div>
 </div>
 
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/UIST24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>Memory Reviver: Supporting Photo-Collection Reminiscence for People with Visual Impairment via a Proactive Chatbot</h3>
+        </div>
+        <div class="author">Shuchang Xu, Chang Chen, Zichen Liu, <strong>Xiaofu Jin</strong>, Lin-Ping Yuan, Yukang Yan, Huamin Qu</div>
+        <div>
+        <span class="venue">In Proceedings of ACM Symposium on User Interface Software and Technology (UIST'24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/UIST24.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/TVCG24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>SynthLens: Visual Analytics for Facilitating Multi-step Synthetic Route Design</h3>
+        </div>
+        <div class="author">Qipeng Wang, Rui Sheng, Shaolun Ruan, <strong>Xiaofu Jin</strong>, Chuhan Shi, Min Zhu</div>
+        <div>
+        <span class="venue">In IEEE Transactions on Visualization and Computer Graphics (TVCG'24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/TVCG24.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/CSCW24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>Systematic Literature Review of Using Virtual Reality as a Social Platform in HCI Community</h3>
+        </div>
+        <div class="author">Xiaoying Wei, <strong>Xiaofu Jin</strong>, Ge Lin Kan, Yukang Yan, Mingming Fan</div>
+        <div>
+        <span class="venue">In ACM conference on Computer-Supported Cooperative Work and Social Computing (CSCW'24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/CSCW4.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/Vinci24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>Augmented Library: Toward Enriching Physical Library Experience Using HMD-Based Augmented Reality</h3>
+        </div>
+        <div class="author">Qianjie Wei, Jingling Zhang, Pengqi Wang, <strong>Xiaofu Jin</strong>, Mingming Fan</div>
+        <div>
+        <span class="venue">In Proceedings of the 17th International Symposium on Visual Information Communication and Interaction (VINCI '24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/Vinci24.pdf">PDF  | </a></span></div>
+      </div>
+</div>
 
 <div class="pub">
       <div class="thumbnail">

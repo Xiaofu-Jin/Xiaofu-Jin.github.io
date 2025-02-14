@@ -10,7 +10,7 @@ excerpt_separator:  <!--more-->
         <p>Hong Kong, China</p>
         </div>
         <div style="display: flex; justify-content: space-between;">
-        <small>PhD candidate of Academy OF Interdisciplinary Studies</small>
+        <small>PhD candidate of Academy Of Interdisciplinary Studies</small>
         <small>2022-current</small>
         </div>
         <small>Advisor: <a href="https://www.mingmingfan.com/">Prof. Mingming Fan</a> 

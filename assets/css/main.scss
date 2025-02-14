@@ -10,5 +10,13 @@
 ---
 $sidebar-bg-color: #19111f;
 $link-color: #51048b;
+a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
 
 @import "hydeout";
