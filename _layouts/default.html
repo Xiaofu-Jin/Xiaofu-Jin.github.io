@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: 'en-us'}}">
 
   {% include head.html %}
+  <script src="{{ '/assets/js/sticky.js' | relative_url }}"></script>
 
   <body class="{{ page.layout }}{% if page.url == '/' %} home{% endif %}">
   <div class="mid-wrapper">

@@ -51,6 +51,8 @@ body {
   .site-title .back-arrow { margin-right: 0.5rem; }
 }
 
+
+
 .content {
   background: $body-bg;
   color: $body-color;
@@ -154,7 +156,9 @@ body {
 
   .mid-wrapper {
     position: relative;
-    margin: auto;
+    width:100%;
+    min-height: 100vh;
+    margin: 0;
     text-align: center;
   }
 
@@ -241,7 +245,7 @@ body {
     }
 
     > * {
-      max-width: 38rem;
+      // max-width: 38rem;
       padding: 0;
     }
   }
