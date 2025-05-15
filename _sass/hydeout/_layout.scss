@@ -76,13 +76,14 @@ body {
 
 @media (max-width: $medium-breakpoint) {
   body {
-    font-size: $mobile-font-size;
+    //font-size: $mobile-font-size;
     flex-direction: column;
     background: $body-bg;
   }
 
   #sidebar {
-    position: relative;
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: $section-spacing * 0.5;
     text-align: center;
@@ -92,7 +93,7 @@ body {
     z-index: 100;
     
     .site-title {
-      font-size: $mobile-font-size * 1.2;
+      font-size: $mobile-font-size * 0.5;
     }
   }
 
@@ -263,27 +264,67 @@ body {
   flex-flow: column nowrap;
 }
 
-#sidebar-icon-links {
-  flex-flow: row wrap;
-  justify-content: center;
+.sidebar-icon-links {
   margin-top: 1rem;
-  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 
-  @media (min-width: $large-breakpoint) {
-    justify-content: flex-start;
-    margin-left: -0.25em;
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: currentColor;
+    }
   }
 }
 
-#sidebar nav > * {
-  display: block;
-  line-height: 1.75;
+@media (max-width: $medium-breakpoint) {
+  .sidebar-icon-links {
+    margin-top: 0.8rem;
+    gap: 0.4rem;
+
+    a {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
 }
 
-#sidebar nav > .icon {
-  display: inline-block;
-  font-size: 1.25rem;
-  margin: 0 0.25em;
+@media (max-width: $small-breakpoint) {
+  .sidebar-icon-links {
+    margin-top: 0.6rem;
+    gap: 0.3rem;
+
+    a {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      svg {
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+    }
+  }
 }
 
 @media print {

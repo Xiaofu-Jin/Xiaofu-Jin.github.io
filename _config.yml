@@ -2,7 +2,7 @@
 markdown:         kramdown
 highlighter:      rouge
 # Setup
-title:            <img src="/headshot.jpg" width="190" alt="Xiaofu Jin" />                
+title:            <img src="/headshot.jpg" alt="Xiaofu Jin" />                
 
 tagline:          'Xiaofu Jin'
 description:       'researcher' #The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.

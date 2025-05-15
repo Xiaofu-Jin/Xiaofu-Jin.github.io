@@ -104,117 +104,89 @@ button.disqus-load {
 }
 
 .pub {
-display: flex;
-border-radius: 0.5rem;
-padding: 1rem;
-box-shadow: 0 0.2rem 0.5rem #00000026 !important;
-.thumbnail {
   display: flex;
-  //position: relative;
-  min-width: 18vw;
-  overflow: hidden;
-  //justify-content: center; 
-  align-items: center;
-  //vertical-align: middle;
-  img {
-      max-width: 100%;
-      width: 18vw;
-      min-width: 18vw;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.2rem 0.5rem #00000026 !important;
+  
+  .thumbnail {
+    display: flex;
+    width: 40%;
+    min-width: 300px;
+    max-width: 400px;
+    overflow: hidden;
+    align-items: center;
+    margin-right: 2rem;
+    
+    img {
+      width: 100%;
+      height: auto;
       border-radius: 5px;
       background-color: white;
-      -webkit-transition: all .5s;
-      -moz-transition: all .5s;
-      -o-transition: all .5s;
-      transition: all .5s;
-      
-  }
-  margin-right: 2vw;
-}
-
-.thumbnail:hover img, .thumbnail:focus img {
-  -ms-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.publications {
-  display: block;
-   
-  h3 {
-    font-family:  sans-serif;
-    margin: 0em;
-      font-weight: 400;
-      max-height: 600px;
-      overflow: hidden;
-      color: #282828;
-      padding: 0;
-      font-size: 0.9rem;
-  
+      transition: transform 0.3s ease;
+      object-fit: contain;
+    }
   }
 
-  .venue {
-    margin-bottom: .4rem;
-    color: #6e6e6e;
-    font-size: 0.7rem;
+  .thumbnail:hover img {
+    transform: scale(1.1);
   }
 
-  .author {
-    margin-bottom: 5px;
-    color: black;
-    font-weight: 80;
-    font-size: 0.8rem;
-  }
-}
-}
-
-@media (max-width: 700px) {
-  .pub {
+  .publications {
+    flex: 1;
     display: block;
-    .thumbnail {
-      //position: relative;
-      min-width: 10vw;
-      overflow: hidden;
-      justify-content: center; 
-      align-items: center;
-      //vertical-align: middle;
-      img {
-          max-width: 100%;
-          width: 50%;
-  }
-}
+    
+    h3 {
+      font-family: sans-serif;
+      margin: 0 0 0.5rem 0;
+      font-weight: 400;
+      color: #282828;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .venue {
+      margin-bottom: 0.5rem;
+      color: #6e6e6e;
+      font-size: 0.85rem;
+    }
+
+    .author {
+      margin-bottom: 0.5rem;
+      color: black;
+      font-weight: normal;
+      font-size: 0.9rem;
+    }
   }
 }
 
 @media (max-width: $medium-breakpoint) {
   .pub {
-    display: block;
+    padding: 1rem;
+    
     .thumbnail {
-      min-width: 100%;
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 1rem;
+      width: 12%;
+      min-width: 100px;
+      max-width: 120px;
+      margin-right: 1.5rem;
       
       img {
-        width: 100%;
-        min-width: 100%;
+        max-height: 100px;
       }
     }
     
     .publications {
-      width: 100%;
-      
       h3 {
-        font-size: $mobile-font-size * 1.1;
+        font-size: 0.9rem;
       }
       
       .author {
-        font-size: $mobile-font-size * 0.9;
+        font-size: 0.85rem;
       }
       
       .venue {
-        font-size: $mobile-font-size * 0.8;
+        font-size: 0.8rem;
       }
     }
   }
@@ -222,17 +194,35 @@ box-shadow: 0 0.2rem 0.5rem #00000026 !important;
 
 @media (max-width: $small-breakpoint) {
   .pub {
+    flex-direction: column;
+    padding: 1rem;
+    
+    .thumbnail {
+      width: 60%;
+      min-width: auto;
+      max-width: 60%;
+      margin: 0 auto 1rem auto;
+      
+      img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+      }
+    }
+    
     .publications {
+      width: 100%;
+      
       h3 {
-        font-size: $mobile-font-size;
+        font-size: 0.85rem;
       }
       
       .author {
-        font-size: $mobile-font-size * 0.85;
+        font-size: 0.8rem;
       }
       
       .venue {
-        font-size: $mobile-font-size * 0.75;
+        font-size: 0.75rem;
       }
     }
   }
