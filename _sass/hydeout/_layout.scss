@@ -82,12 +82,14 @@ body {
   }
 
   #sidebar {
-    position: static;
+    position: relative;
     width: 100%;
     padding: $section-spacing * 0.5;
     text-align: center;
     background: $sidebar-bg-color;
     background-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%));
+    margin-bottom: $section-spacing;
+    z-index: 100;
     
     .site-title {
       font-size: $mobile-font-size * 1.2;
@@ -96,6 +98,7 @@ body {
 
   .content {
     padding: $section-spacing * 0.5;
+    position: relative;
   }
 
   .container {
@@ -120,11 +123,13 @@ body {
   }
 
   #sidebar {
-    position: static;
+    position: relative;
     padding: $section-spacing * 0.3;
     text-align: center;
     background: $sidebar-bg-color;
     background-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%));
+    margin-bottom: $section-spacing * 0.8;
+    z-index: 100;
     
     .site-title {
       font-size: $mobile-font-size;
@@ -209,7 +214,7 @@ body {
     background: $body-bg;
     color: $body-color;
     min-height: 100vh;
-    padding: $section-spacing * 2;
+    padding: $section-spacing;
     margin-left: $sidebar-width;
   }
 }
