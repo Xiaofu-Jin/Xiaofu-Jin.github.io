@@ -51,8 +51,6 @@ body {
   .site-title .back-arrow { margin-right: 0.5rem; }
 }
 
-
-
 .content {
   background: $body-bg;
   color: $body-color;
@@ -76,33 +74,76 @@ body {
   Mobile view
 ----------------------------------------------------------- */
 
-// Hide secondary nav content in sidebar
-// Hide lead paragraph in sidebar
-// #sidebar {
-//   header ~ *,
-//   header ~ nav,
-// //   p.lead {
-// //     display: none;
-// //   }
-//  }
-
-// Make header elements blend into sidebar / background
-.container > header {
-  background: transparent;
-  color: $sidebar-title-color;
-  margin:
-    ($heading-spacing - $section-spacing)
-    $section-spacing
-    $section-spacing;
-
-  h1,
-  h2 {
-    color: inherit;
+@media (max-width: $medium-breakpoint) {
+  body {
+    font-size: $mobile-font-size;
+    flex-direction: column;
+    background: $body-bg;
   }
 
-  h1:last-child,
-  h2:last-child {
-    margin-bottom: 0;
+  #sidebar {
+    position: static;
+    width: 100%;
+    padding: $section-spacing * 0.5;
+    text-align: center;
+    background: $sidebar-bg-color;
+    background-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%));
+    
+    .site-title {
+      font-size: $mobile-font-size * 1.2;
+    }
+  }
+
+  .content {
+    padding: $section-spacing * 0.5;
+  }
+
+  .container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    background: $body-bg;
+  }
+
+  .container > header {
+    margin: 
+      ($heading-spacing - $section-spacing * 0.5)
+      $section-spacing * 0.5
+      $section-spacing * 0.5;
+  }
+}
+
+@media (max-width: $small-breakpoint) {
+  body {
+    font-size: $mobile-font-size * 0.9;
+    background: $body-bg;
+  }
+
+  #sidebar {
+    position: static;
+    padding: $section-spacing * 0.3;
+    text-align: center;
+    background: $sidebar-bg-color;
+    background-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%));
+    
+    .site-title {
+      font-size: $mobile-font-size;
+    }
+  }
+
+  .content {
+    padding: $section-spacing * 0.3;
+  }
+
+  .container {
+    background: $body-bg;
+  }
+
+  .container > header {
+    margin: 
+      ($heading-spacing - $section-spacing * 0.3)
+      $section-spacing * 0.3
+      $section-spacing * 0.3;
   }
 }
 
@@ -147,6 +188,7 @@ body {
     min-height: 100vh;
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
+    background: $sidebar-bg-color;
 
     > * {
       -webkit-overflow-scrolling: touch;
@@ -154,100 +196,21 @@ body {
     }
   }
 
-  .mid-wrapper {
-    position: relative;
-    width:100%;
-    min-height: 100vh;
-    margin: 0;
-    text-align: center;
-  }
-
-  /* Undo mobile CSS */
-
-  #sidebar,
-  .home #sidebar {
-    text-align: left;
-    width: $sidebar-width;
-
-    > *:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   #sidebar {
-    position: absolute;
-
-    // Attach to bottom or top of window
-    @if $sidebar-sticky {
-      top: 0;
-    }
-
-    @else {
-      top: 0;
-    }
-
-    // Attach to right or left of window
-    @if $layout-reverse {
-      right: 0;
-    }
-
-    @else {
-      left: 0;
-    }
-
-    .site-title {
-      font-size: 1.5rem;
-      .back-arrow { display: none; }
-    }
-
-    p.lead,
-    header ~ * {
-      display: block;
-    }
-
-    header ~ nav {
-      display: flex;
-    }
+    position: fixed;
+    width: $sidebar-width;
+    height: 100vh;
+    overflow-y: auto;
+    background: $sidebar-bg-color;
+    text-align: left;
   }
 
-  .index #sidebar { margin-bottom: 0; }
-
-  // Make entire container background white to contrast against sidebar
   .container {
     background: $body-bg;
     color: $body-color;
     min-height: 100vh;
-    padding:
-      $section-spacing * 2
-      $section-spacing * 2
-      0;
-
-    @if $layout-reverse {
-      margin-right: $sidebar-width;
-    }
-
-    @else {
-      margin-left: $sidebar-width;
-    }
-
-    > header {
-      color: $heading-color;
-      margin: 0;
-
-      h1,
-      h2 {
-        color: inherit;
-
-        &:last-child {
-          margin-bottom: $heading-spacing;
-        }
-      }
-    }
-
-    > * {
-      // max-width: 38rem;
-      padding: 0;
-    }
+    padding: $section-spacing * 2;
+    margin-left: $sidebar-width;
   }
 }
 

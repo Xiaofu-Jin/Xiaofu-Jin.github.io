@@ -186,3 +186,54 @@ box-shadow: 0 0.2rem 0.5rem #00000026 !important;
 }
   }
 }
+
+@media (max-width: $medium-breakpoint) {
+  .pub {
+    display: block;
+    .thumbnail {
+      min-width: 100%;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+      
+      img {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+    
+    .publications {
+      width: 100%;
+      
+      h3 {
+        font-size: $mobile-font-size * 1.1;
+      }
+      
+      .author {
+        font-size: $mobile-font-size * 0.9;
+      }
+      
+      .venue {
+        font-size: $mobile-font-size * 0.8;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-breakpoint) {
+  .pub {
+    .publications {
+      h3 {
+        font-size: $mobile-font-size;
+      }
+      
+      .author {
+        font-size: $mobile-font-size * 0.85;
+      }
+      
+      .venue {
+        font-size: $mobile-font-size * 0.75;
+      }
+    }
+  }
+}

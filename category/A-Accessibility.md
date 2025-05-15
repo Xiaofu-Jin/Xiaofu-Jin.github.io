@@ -1,6 +1,6 @@
 ---
 layout: category
-title:  Accessibility
+title:  AI for social good
 excerpt_separator:  <!--more-->
 ---
 <div class="message">
@@ -18,6 +18,7 @@ Multi-Viewer Audio Discussions</h3>
         <div class="author">Shuchang Xu, <strong>Xiaofu Jin</strong>, Huamin Qu, Yukang Yan</div>
         <div>
         <span class="venue">In ACM CHI Conference on Human Factors in Computing Systems (CHI'25)
+        <span style="color: #ff6b6b; font-weight: bold;">Honorable Mention Award</span>
         </span>
         </div>
         <div><span class="venue"><a href="/papers/CHI25-Danmu.pdf">PDF  | </a></span></div>
@@ -76,7 +77,39 @@ Multi-Viewer Audio Discussions</h3>
       </div>
 </div>
 
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/TVCG24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>SynthLens: Visual Analytics for Facilitating Multi-step Synthetic Route Design</h3>
+        </div>
+        <div class="author">Qipeng Wang, Rui Sheng, Shaolun Ruan, <strong>Xiaofu Jin</strong>, Chuhan Shi, Min Zhu</div>
+        <div>
+        <span class="venue">In IEEE Transactions on Visualization and Computer Graphics (TVCG'24)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/TVCG24.pdf">PDF  | </a></span></div>
+      </div>
+</div>
 
+<div class="pub">
+      <div class="thumbnail">
+        <img src="/images/CHI24-DC.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>Empowering Autonomous Digital Learning for Older Adults</h3>
+        </div>
+        <div class="author"><b>Xiaofu Jin</b></div>
+        <div>
+        <span class="venue">In ACM CHI Conference on Human Factors in Computing Systems (CHI'24 Extended Abstract)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/CHI24_DC.pdf">PDF  | </a></span></div>
+      </div>
+</div>
 
 <div class="pub">
       <div class="thumbnail">

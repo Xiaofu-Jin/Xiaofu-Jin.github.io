@@ -8,6 +8,23 @@ Selected Publications
 
 <div class="pub">
       <div class="thumbnail">
+        <img src="/images/CSCW24.png" />
+      </div>
+      <div class="publications">
+       <div> 
+        <h3>Systematic Literature Review of Using Virtual Reality as a Social Platform in HCI Community</h3>
+        </div>
+        <div class="author">Xiaoying Wei, <strong>Xiaofu Jin</strong>, Ge Lin Kan, Yukang Yan, Mingming Fan</div>
+        <div>
+        <span class="venue">In ACM conference on Computer-Supported Cooperative Work and Social Computing (CSCW'25)
+        </span>
+        </div>
+        <div><span class="venue"><a href="/papers/CSCW24.pdf">PDF  | </a></span></div>
+      </div>
+</div>
+
+<div class="pub">
+      <div class="thumbnail">
         <img src="/images/CHI24AR.png" />
       </div>
       <div class="publications">
@@ -23,22 +40,7 @@ Selected Publications
       </div>
 </div>
 
-<div class="pub">
-      <div class="thumbnail">
-        <img src="/images/CSCW24.png" />
-      </div>
-      <div class="publications">
-       <div> 
-        <h3>Systematic Literature Review of Using Virtual Reality as a Social Platform in HCI Community</h3>
-        </div>
-        <div class="author">Xiaoying Wei, <strong>Xiaofu Jin</strong>, Ge Lin Kan, Yukang Yan, Mingming Fan</div>
-        <div>
-        <span class="venue">In ACM conference on Computer-Supported Cooperative Work and Social Computing (CSCW'24)
-        </span>
-        </div>
-        <div><span class="venue"><a href="/papers/CSCW4.pdf">PDF  | </a></span></div>
-      </div>
-</div>
+
 
 <div class="pub">
       <div class="thumbnail">
@@ -101,7 +103,8 @@ Selected Publications
         </div>
         <div class="author">Xiaoying Wei#, <strong>Xiaofu Jin#</strong>, Mingming Fan</div>
         <div>
-        <span class="venue">In The Tenth International Symposium of Chinese CHI, ACM
+        <span class="venue">In ACM Chinese CHI 2022
+        <span style="color: #ff6b6b; font-weight: bold;">Honorable Mention Award</span>
         </span>
         </div>
         <div><span class="venue"><a href="/papers/ChineseCHI22_Literature_Review_Social_VR.pdf">PDF |</a></span></div>
