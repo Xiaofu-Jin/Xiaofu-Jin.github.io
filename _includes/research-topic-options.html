@@ -1,0 +1,29 @@
+{% comment %}
+  Publication filters, in two levels like the research map: area tabs (in the
+  order of _data/research_topics.json, "All" last), then the selected area's
+  categories. /#research-<area or category id> links scroll to the empty
+  anchors below without JS, and assets/js/research-topics.js then filters the
+  list in place. The anchors are separate, non-focusable elements so that
+  arriving via a link does not move keyboard focus onto a tab.
+{% endcomment %}
+{% assign selected_topic = include.selected | default: 'all' %}
+<div class="research-topic-anchors">
+  {% for topic in site.data.research_topics %}<span id="research-{{ topic.id }}"></span>{% for category in topic.categories %}<span id="research-{{ category.id }}"></span>{% endfor %}{% endfor %}
+</div>
+<nav class="research-topic-options" aria-label="Filter publications by research area">
+  {% for topic in site.data.research_topics %}
+    <a class="research-topic-option" href="{{ '/' | relative_url }}#research-{{ topic.id }}" data-topic="{{ topic.id }}" data-description="{{ topic.description | escape }}"{% if selected_topic == topic.id %} aria-current="true"{% endif %}>
+      <span>{{ topic.title }}</span>
+    </a>
+  {% endfor %}
+</nav>
+{% for topic in site.data.research_topics %}
+  {% if topic.categories %}
+<nav class="research-category-options research-category-options--{{ topic.id }}" data-area="{{ topic.id }}" aria-label="Filter {{ topic.title | escape }} publications by category" hidden>
+  {% for category in topic.categories %}
+  <a class="research-category-option" href="{{ '/' | relative_url }}#research-{{ category.id }}" data-area="{{ topic.id }}" data-category="{{ category.id }}">{{ category.title }}</a>
+  {% endfor %}
+  <a class="research-category-option" href="{{ '/' | relative_url }}#research-{{ topic.id }}" data-area="{{ topic.id }}" data-category="">All categories</a>
+</nav>
+  {% endif %}
+{% endfor %}

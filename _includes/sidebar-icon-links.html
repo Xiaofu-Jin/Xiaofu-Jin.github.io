@@ -1,15 +1,18 @@
-<nav id="sidebar-icon-links">
+<nav id="sidebar-icon-links" class="sidebar-icon-links">
   
+    {% comment %}
+      GitHub link hidden for now; remove these comment tags to show it again.
     <a id="github-link"
-       class="icon" title="Github Project" aria-label="Github Project"
+       class="icon" title="GitHub" aria-label="GitHub"
        href="https://github.com/Xiaofu-Jin">
       {% include svg/github.svg %}
     </a>
+    {% endcomment %}
     
 
 
   <a id="subscribe-link"
-     class="icon" title="Subscribe" aria-label="Subscribe"
+     class="icon" title="Google Scholar" aria-label="Google Scholar"
      href="https://scholar.google.com/citations?user=AuZH5MMAAAAJ">
     {% include svg/icons8-google-scholar.svg %}
   </a>
@@ -30,8 +33,8 @@
   {% if tags_page %}
     <a id="tags-link"
        class="icon{% if page.url == '/tags' %} active{% endif %}"
-       title="Tags" aria-label="Tags"
-       href="mailto:suffvier@gmail.com">
+       title="Email" aria-label="Email"
+       href="mailto:Xiaofu.Jin@vis.uni-stuttgart.de">
       {% include svg/email.svg %}
     </a>
   {% endif %}
@@ -39,17 +42,11 @@
   {% if search_page %}
     <a id="search-link"
        class="icon{% if page.url == '/search' %} active{% endif %}"
-       title="Search" aria-label="Search"
+       title="LinkedIn" aria-label="LinkedIn"
        href="https://www.linkedin.com/in/xiaofu-jin-75932b111">
       {% include svg/iconmonstr-linkedin-3.svg %}
     </a>
   {% endif %}
-
-  <a id="github-download-link"
-       class="icon" title="Download" aria-label="Download"
-       href="/CV.pdf">
-      {% include svg/curriculum-vitae.svg %}
-    </a>
 
   {% include custom-icon-links.html %}
 

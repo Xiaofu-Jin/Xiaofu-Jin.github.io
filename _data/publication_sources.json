@@ -1,0 +1,808 @@
+{
+  "checked_on": "2026-10-11",
+  "coverage": "2025 onward, published records verified against publisher/Crossref metadata, plus two accepted UIST 2026 papers verified against the author website. Google Scholar returned HTTP 429 in the earlier audit.",
+  "papers": [
+    {
+      "title": "Sonic Stage: Automatically Generating Interactive Spatial Soundscapes to Facilitate Dialogue Video Comprehension for Blind Viewers",
+      "authors": [
+        "Shuchang Xu",
+        "Xiaofu Jin",
+        "Gaurav Jain",
+        "Wenshuo Zhang",
+        "Huamin Qu",
+        "Brian A. Smith",
+        "Yukang Yan"
+      ],
+      "doi": "10.1145/3830398.3830486",
+      "publisher_url": null,
+      "venue": "UIST 2026",
+      "year": 2026,
+      "topic": "empowerment",
+      "category": "accessible-interaction",
+      "image": "/images/sonic-stage-uist2026-teaser.png",
+      "figure": {
+        "source_url": "https://shuchangxu.github.io/assets/img/13_SonicStage.png",
+        "figure": "Author website authentic teaser, combines model illustration and video-filmstrip",
+        "visually_verified": true
+      },
+      "metadata_sources": [
+        "https://shuchangxu.github.io/",
+        "https://shuchangxu.github.io/publications/",
+        "https://shuchangxu.github.io/Sonic_Stage_Demo/"
+      ],
+      "note": "Accepted, to appear; no unresolvable Paper/DOI link is displayed.",
+      "award": "Best Paper Award",
+      "award_source": "User confirmation, 2026-10-29"
+    },
+    {
+      "title": "Task-sensitive fNIRS–eye-tracking complementarity for adaptive intelligent systems: An attribution–sufficiency diagnostic framework",
+      "authors": [
+        "Lina Xu",
+        "Bojing Hou",
+        "Yuqi Liang",
+        "Xiaofu Jin",
+        "Haotian Bai",
+        "Yuyang Wang",
+        "Luwen Yu"
+      ],
+      "doi": "10.1016/j.eswa.2026.134296",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S0957417426032021",
+      "venue": "Expert Systems with Applications, 333, 134296 (ESWA '26)",
+      "year": 2026,
+      "publication_date_parts": [
+        2026,
+        9,
+        5
+      ],
+      "image": "/images/fnirs-eye-tracking-eswa2026-framework.png",
+      "figure": {
+        "figure_source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0957417426032021-gr2.jpg",
+        "figure": "Figure 2 (framework overview), cropped to its top two panels",
+        "asset": "fnirs-eye-tracking-eswa2026-framework.png",
+        "notes": "No publisher graphical abstract (ga1 returns 404). Figure 2 downloaded from the Elsevier CDN and cropped to the acquisition and preprocessing panels (713x368 px), saved as PNG.",
+        "visually_verified": true
+      },
+      "metadata_source": "https://api.crossref.org/works?filter=alternative-id:S0957417426032021",
+      "date_note": "Online 2026-09-05 per OpenAlex (https://api.openalex.org/works/doi:10.1016/j.eswa.2026.134296); Crossref lists volume 333 with issue date 2027-01. Listed under 2026 on the site.",
+      "topic": "understanding",
+      "category": "state-inference"
+    },
+    {
+      "title": "RemiAssist: A Therapist-Supporting System for Photo-Based Reminiscence Therapy in Dementia Care",
+      "authors": [
+        "Shuchang Xu",
+        "Minglong Tang",
+        "Junyan Mao",
+        "Xiaofu Jin",
+        "Wazeer Zulfikar",
+        "Yasith Samaradivakara",
+        "Jiayi Zhou",
+        "Huamin Qu",
+        "Yuling Sun",
+        "Pattie Maes"
+      ],
+      "doi": "10.1145/3830398.3830485",
+      "publisher_url": null,
+      "venue": "UIST 2026",
+      "year": 2026,
+      "topic": "empowerment",
+      "category": "guidance-decision-support",
+      "image": "/images/remiassist-uist2026-teaser.png",
+      "figure": {
+        "source_url": "https://shuchangxu.github.io/assets/img/14_RemiAssist.png",
+        "figure": "Author website authentic teaser/model illustration",
+        "visually_verified": true
+      },
+      "metadata_sources": [
+        "https://shuchangxu.github.io/",
+        "https://shuchangxu.github.io/publications/",
+        "https://collaborative-ai.org/publications/xu26_uist1/"
+      ],
+      "note": "Accepted, to appear; no unresolvable Paper/DOI link is displayed."
+    },
+    {
+      "title": "Hierarchical resource rationality explains human reading behaviour",
+      "authors": [
+        "Yunpeng Bai",
+        "Xiaofu Jin",
+        "Shengdong Zhao",
+        "Antti Oulasvirta"
+      ],
+      "doi": "10.1038/s41562-026-02534-0",
+      "publisher_url": "https://www.nature.com/articles/s41562-026-02534-0",
+      "venue": "Nature Human Behaviour (2026)",
+      "year": 2026,
+      "publication_date_parts": [
+        2026,
+        8,
+        10
+      ],
+      "image": "/images/reading-fig1.png",
+      "figure": {
+        "source_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-026-02534-0/MediaObjects/41562_2026_2534_Fig1_HTML.png",
+        "asset": "reading-fig1.png",
+        "figure": 1,
+        "crop": "none, official fullsize figure",
+        "dimensions_pixels": [
+          1776,
+          1324
+        ]
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1038/s41562-026-02534-0",
+      "topic": "understanding",
+      "category": "cognitive-behavior-modeling"
+    },
+    {
+      "title": "Beyond Correctness: A Stage-Aware Framework for Decoding Student Problem-Solving Processes from Handwriting Trajectories",
+      "authors": [
+        "Zhonghua Sheng",
+        "Shuyu Shen",
+        "Qiqi Duan",
+        "Leixian Shen",
+        "Xiaofu Jin",
+        "Pan Hui",
+        "Huamin Qu",
+        "Yuyu Luo"
+      ],
+      "doi": "10.1007/978-3-032-29763-1_15",
+      "publisher_url": "https://link.springer.com/chapter/10.1007/978-3-032-29763-1_15",
+      "venue": "International Conference on Artificial Intelligence in Education (AIED '26)",
+      "year": 2026,
+      "publication_date_parts": [
+        2026,
+        6,
+        27
+      ],
+      "image": "/images/beyond-correctness-model.png",
+      "figure": {
+        "source_url": "https://shenleixian.github.io/pdf/Beyond_Correctness.pdf",
+        "asset": "beyond-correctness-model.png",
+        "figure": 1,
+        "pdf_page": 5,
+        "printed_page": 219,
+        "crop_points": [
+          86,
+          53,
+          367,
+          222
+        ],
+        "render_scale": 5,
+        "note": "Publisher metadata copyright/citation2027 conflicts with first online2026 and conferenceAIED2026. Prefer actual First Online date2026. Render preserves vector label overlays missing from extracted raster base.",
+        "dimensions_pixels": [
+          1405,
+          845
+        ]
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1007/978-3-032-29763-1_15",
+      "topic": "understanding",
+      "category": "state-inference"
+    },
+    {
+      "title": "Adaptive Prompt Elicitation for Text-to-Image Generation",
+      "authors": [
+        "Xinyi Wen",
+        "Lena Hegemann",
+        "Xiaofu Jin",
+        "Shuai Ma",
+        "Antti Oulasvirta"
+      ],
+      "doi": "10.1145/3742413.3789149",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3742413.3789149",
+      "venue": "ACM International Conference on Intelligent User Interfaces (IUI '26)",
+      "year": 2026,
+      "publication_date_parts": [
+        2026,
+        3,
+        22
+      ],
+      "image": "/images/ape-teaser.png",
+      "figure": {
+        "source_url": "https://shuaima.cc/personal_webpage_files/paper_pdf/APE.pdf",
+        "asset": "ape-teaser.png",
+        "figure": 1,
+        "pdf_page": 1,
+        "crop_points": [
+          51,
+          252,
+          559,
+          499
+        ],
+        "render_scale": 3.2,
+        "note": "Final-format author PDF contains ACM DOI, conference dates and copyright2026.",
+        "dimensions_pixels": [
+          1626,
+          791
+        ]
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3742413.3789149",
+      "topic": "empowerment",
+      "category": "human-centered-collaboration"
+    },
+    {
+      "title": "TrialCompass: Visual Analytics for Enhancing the Eligibility Criteria Design of Clinical Trials",
+      "authors": [
+        "Rui Sheng",
+        "Xingbo Wang",
+        "Jiachen Wang",
+        "Xiaofu Jin",
+        "Zhonghua Sheng",
+        "Zhenxing Xu",
+        "Suraj Rajendran",
+        "Huamin Qu",
+        "Fei Wang"
+      ],
+      "doi": "10.1109/tvcg.2025.3634803",
+      "publisher_url": "https://ieeexplore.ieee.org/document/11261878",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics, 32(1), 1230–1240 (TVCG '26)",
+      "year": 2026,
+      "publication_date_parts": [
+        2026,
+        1
+      ],
+      "image": "/images/trialcompass-teaser.png",
+      "figure": {
+        "source_url": "https://andy-xingbowang.com/papers/trialcompass_vis25.pdf",
+        "asset": "trialcompass-teaser.png",
+        "figure": 1,
+        "pdf_page": 1,
+        "crop_points": [
+          75,
+          140,
+          543,
+          408
+        ],
+        "render_scale": 3.2,
+        "note": "Figure source is author preprint with matched final paper title/authors; website canonical link is publisher DOI.",
+        "dimensions_pixels": [
+          1498,
+          858
+        ]
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1109/tvcg.2025.3634803",
+      "topic": "empowerment",
+      "category": "guidance-decision-support"
+    },
+    {
+      "title": "Pick the Right Thing: GenAI-Supported Design and Production Workflows of Curators",
+      "authors": [
+        "Jingling Zhang",
+        "Yan Xiang",
+        "Yuanjin Zhao",
+        "Xiaofu Jin",
+        "Jia Sun",
+        "Xin Tong",
+        "Mingming Fan",
+        "RAY LC"
+      ],
+      "doi": "10.1145/3769534.3769605",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3769534.3769605",
+      "venue": "International Symposium on Visual Information Communication and Interaction (VINCI '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        12,
+        18
+      ],
+      "image": "/images/pick-the-right-thing-vinci2025-teaser.png",
+      "figure": {
+        "figure_source_url": "https://aaltodoc.aalto.fi/server/api/core/bitstreams/60f683c8-38a4-4fea-8bd4-1f05cb7b4162/content",
+        "pdf_page": 5,
+        "printed_page": 3,
+        "figure": "Figure1: Posters, space design and view from virtual exhibition for three case studies exhibitions",
+        "crop_pdf_points": [
+          316,
+          351,
+          560,
+          431
+        ],
+        "asset": "pick-the-right-thing-vinci2025-teaser.png",
+        "alternative_asset": "pick-the-right-thing-vinci2025-workflow.png",
+        "alternative_figure": "Figure2: The tasks completed using GenAI at each stage of the curatorial workflow, and the benefits and challenges associated with its use",
+        "alternative_pdf_page": 6,
+        "alternative_crop_pdf_points": [
+          52,
+          81,
+          297,
+          147
+        ],
+        "notes": "Aalto repository explicitly identifies this as publisher Version of Record with CC BY license. PDF includes two repository/download wrapper pages; the article begins PDFpage3. Zhang and Xiang equal contribution. Last author appears as RAY LC in original article (repository authority renders name differently).",
+        "dimensions_px": [
+          1464,
+          480
+        ],
+        "visually_verified": true
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3769534.3769605",
+      "topic": "understanding",
+      "category": null
+    },
+    {
+      "title": "Toward AI-driven UI transition intuitiveness inspection for smartphone apps",
+      "authors": [
+        "Xiaozhu Hu",
+        "Xiaoyu Mo",
+        "Xiaofu Jin",
+        "Yuan Chai",
+        "Yongquan Hu",
+        "Mingming Fan",
+        "Tristan Braud"
+      ],
+      "doi": "10.1016/j.ijhcs.2025.103661",
+      "publisher_url": "https://www.sciencedirect.com/science/article/pii/S1071581925002186",
+      "venue": "International Journal of Human-Computer Studies, 206, 103661 (IJHCS '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        12
+      ],
+      "image": "/images/utp-ijhcs2025-graphical-abstract.png",
+      "figure": {
+        "figure_source_url": "https://ars.els-cdn.com/content/image/1-s2.0-S1071581925002186-ga1_lrg.jpg",
+        "figure": "Publisher graphical abstract",
+        "asset": "utp-ijhcs2025-graphical-abstract.png",
+        "notes": "Final graphical abstract downloaded directly from Elsevier publisher CDN. Cross-checked against author manuscript graphical abstract on PDFpage2. Full figure unchanged except lossless PNG format conversion. Final publisher-format19-page paper also downloaded from author webpage as utp2025-published.pdf; no conference-extension statement/reference to WWW UILT found.",
+        "dimensions_px": [
+          1333,
+          1027
+        ],
+        "visually_verified": true,
+        "final_pdf_source_url": "https://www.mingmingfan.com/papers/IJHCS-UI-Transition.pdf"
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1016/j.ijhcs.2025.103661",
+      "topic": "understanding",
+      "category": "cognitive-behavior-modeling"
+    },
+    {
+      "title": "When Traditional Medicine Meets AI: Critical Considerations for AI-Empowered Clinical Support in Traditional Medicine",
+      "authors": [
+        "Yuling Sun",
+        "Wenjing Yue",
+        "Xiaofu Jin",
+        "Shuai Ma",
+        "Xiaojuan Ma",
+        "Xiaoling Wang"
+      ],
+      "doi": "10.1145/3757705",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3757705",
+      "venue": "Proceedings of the ACM on Human-Computer Interaction, 9(7) (CSCW '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        10,
+        16
+      ],
+      "image": "/images/traditional-medicine-cscw2025-system.png",
+      "figure": {
+        "figure_source_url": "https://shuaima.cc/personal_webpage_files/paper_pdf/TCM_CSCW.pdf",
+        "pdf_page": 7,
+        "printed_page": "CSCW524:7",
+        "figure": "Figure 1: The system structure of Shuzhiqihuang",
+        "crop_pdf_points": [
+          94,
+          83,
+          390,
+          265
+        ],
+        "asset": "traditional-medicine-cscw2025-system.png",
+        "notes": "Publisher-formatted author-hosted final paper. PDF says November2025 whereas publisher bibliographic record reports October16; year2025 verified. First two authors equal contribution.",
+        "dimensions_px": [
+          1480,
+          910
+        ],
+        "visually_verified": true
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3757705",
+      "topic": "understanding",
+      "category": "needs-practices"
+    },
+    {
+      "title": "SynthLens: Visual Analytics for Facilitating Multi-Step Synthetic Route Design",
+      "authors": [
+        "Qipeng Wang",
+        "Rui Sheng",
+        "Shaolun Ruan",
+        "Xiaofu Jin",
+        "Chuhan Shi",
+        "Min Zhu"
+      ],
+      "doi": "10.1109/tvcg.2025.3552134",
+      "publisher_url": "https://ieeexplore.ieee.org/document/10930688",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics, 31(10), 7647–7660 (TVCG '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        10
+      ],
+      "image": "/images/TVCG24.png",
+      "figure": {
+        "asset": "TVCG24.png",
+        "figure": "Figure 3: SynthLens main interface",
+        "source_url": "/papers/TVCG24.pdf",
+        "pdf_page": 6,
+        "note": "Retained existing paper figure after visual comparison with the source PDF."
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1109/tvcg.2025.3552134",
+      "topic": "empowerment",
+      "category": "guidance-decision-support"
+    },
+    {
+      "title": "Branch Explorer: Leveraging Branching Narratives to Support Interactive 360° Video Viewing for Blind and Low Vision Users",
+      "authors": [
+        "Shuchang Xu",
+        "Xiaofu Jin",
+        "Wenshuo Zhang",
+        "Huamin Qu",
+        "Yukang Yan"
+      ],
+      "doi": "10.1145/3746059.3747791",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3746059.3747791",
+      "venue": "ACM Symposium on User Interface Software and Technology (UIST '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        9,
+        27
+      ],
+      "image": "/images/branch-explorer-uist2025-teaser.png",
+      "figure": {
+        "asset": "branch-explorer-uist2025-teaser.png",
+        "figure": "Figure 1: Branch Explorer teaser",
+        "pdf_page": 1,
+        "crop_points": [
+          53,
+          273,
+          559,
+          437
+        ],
+        "source_url": "https://arxiv.org/pdf/2507.09959",
+        "note": "Figure from the matching ACM-formatted author manuscript with the final UIST DOI; the article link points to the published ACM record."
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3746059.3747791",
+      "topic": "empowerment",
+      "category": "accessible-interaction"
+    },
+    {
+      "title": "Decoding Cognitive Load: Eye-Tracking Insights into Working Memory and Visual Attention",
+      "authors": [
+        "Xiaofu Jin",
+        "Yunpeng Bai",
+        "Lina Xu",
+        "Shuai Ma",
+        "Danqing Shi",
+        "Luwen Yu",
+        "Mingming Fan"
+      ],
+      "doi": "10.1145/3715669.3725864",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3715669.3725864",
+      "venue": "ACM Symposium on Eye Tracking Research and Applications (ETRA '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        5,
+        25
+      ],
+      "image": "/images/ETRA25.png",
+      "figure": {
+        "asset": "ETRA25.png",
+        "figure": "Figure 1: Working memory and visual attention experiment timeline",
+        "source_url": "/papers/ETRA25.pdf",
+        "pdf_page": 5,
+        "note": "Retained existing paper figure after visual comparison with the source PDF."
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3715669.3725864",
+      "topic": "understanding",
+      "category": "state-inference"
+    },
+    {
+      "title": "Modeling the Intuitiveness of Mobile GUI Navigation by Understanding and Simulating Users' Attention Distribution",
+      "authors": [
+        "Xiaozhu Hu",
+        "Xiaoyu Mo",
+        "Xiaofu Jin",
+        "Yongquan Owen Hu",
+        "Mingming Fan",
+        "Tristan Braud"
+      ],
+      "doi": "10.1145/3701716.3717552",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3701716.3717552",
+      "venue": "Companion Proceedings of the ACM Web Conference (WWW Companion '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        5,
+        23
+      ],
+      "image": "/images/modeling-intuitiveness-www2025-main-model.png",
+      "figure": {
+        "figure_source_url": "https://www.mingmingfan.com/papers/WWW25-companion-modeling-intuitiveness.pdf",
+        "pdf_page": 6,
+        "printed_page": 2250,
+        "figure": "Figure 5: The model structure of UILT",
+        "crop_pdf_points": [
+          50,
+          246,
+          561,
+          579
+        ],
+        "asset": "modeling-intuitiveness-www2025-main-model.png",
+        "notes": "Publisher-formatted author-hosted final paper. Header and copyright specify WWW Companion 2025, not CHI. Genuine model diagram, no caption/body text included.",
+        "dimensions_px": [
+          2044,
+          1332
+        ],
+        "visually_verified": true
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3701716.3717552",
+      "topic": "understanding",
+      "category": "cognitive-behavior-modeling"
+    },
+    {
+      "title": "Systematic Literature Review of Using Virtual Reality as a Social Platform in HCI Community",
+      "authors": [
+        "Xiaoying Wei",
+        "Xiaofu Jin",
+        "Ge Lin Kan",
+        "Yukang Yan",
+        "Mingming Fan"
+      ],
+      "doi": "10.1145/3711078",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3711078",
+      "venue": "Proceedings of the ACM on Human-Computer Interaction, 9(2) (CSCW '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        5,
+        2
+      ],
+      "image": "/images/CSCW24.png",
+      "figure": {
+        "asset": "CSCW24.png",
+        "figure": "Figure 3: Review framework and taxonomy",
+        "source_url": "/papers/CSCW24.pdf",
+        "pdf_page": 10,
+        "note": "Retained existing paper figure after visual comparison with the source PDF."
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3711078",
+      "topic": null,
+      "category": null
+    },
+    {
+      "title": "DanmuA11y: Making Time-Synced On-Screen Video Comments (Danmu) Accessible to Blind and Low Vision Users via Multi-Viewer Audio Discussions",
+      "authors": [
+        "Shuchang Xu",
+        "Xiaofu Jin",
+        "Huamin Qu",
+        "Yukang Yan"
+      ],
+      "doi": "10.1145/3706598.3713496",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3706598.3713496",
+      "venue": "ACM CHI Conference on Human Factors in Computing Systems (CHI '25)",
+      "year": 2025,
+      "publication_date_parts": [
+        2025,
+        4,
+        25
+      ],
+      "image": "/images/danmu-chi2025-teaser.png",
+      "figure": {
+        "asset": "danmu-chi2025-teaser.png",
+        "figure": "Figure 1: DanmuA11y teaser",
+        "pdf_page": 1,
+        "crop_points": [
+          53,
+          264,
+          559,
+          385
+        ],
+        "source_url": "/papers/CHI25-Danmu.pdf",
+        "note": "Figure from the existing ACM-formatted author manuscript, matched to the final CHI DOI."
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3706598.3713496",
+      "topic": "empowerment",
+      "category": "accessible-interaction"
+    },
+    {
+      "title": "A Resource-Rational Account of Information Scent in Navigation",
+      "authors": [
+        "Xiaofu Jin",
+        "Yunpeng Bai",
+        "Antti Oulasvirta"
+      ],
+      "doi": null,
+      "publisher_url": null,
+      "venue": "International Conference on Cognitive Modeling (ICCM 2026)",
+      "year": 2026,
+      "status": "Accepted as Talk",
+      "acceptance_source": "User instruction",
+      "topic": "understanding",
+      "category": "cognitive-behavior-modeling",
+      "image": "/images/iccm-navigation-model.png",
+      "figure": {
+        "source_url": "/papers/ICCM_ACTalk.pdf",
+        "figure": 1,
+        "pdf_page": 2,
+        "crop_points": [
+          324,
+          69,
+          549,
+          178
+        ],
+        "visually_verified": true
+      },
+      "conference_date_parts": [
+        2026,
+        7,
+        18
+      ],
+      "metadata_sources": [
+        "/papers/ICCM_ACTalk.pdf",
+        "https://www.mathpsych.org/session/508"
+      ]
+    }
+  ],
+  "older_publisher_links": [
+    {
+      "title_substring": "EarMonitor",
+      "doi": "10.1145/3676499",
+      "publisher_link": "https://doi.org/10.1145/3676499",
+      "published_title": "EarMonitor: Non-clinical Assessment of Ear Health Conditions Using a Low-cost Endoscope Camera on Smartphones",
+      "source": "https://api.crossref.org/works/10.1145/3676499"
+    },
+    {
+      "title_substring": "Exploring the Opportunity of Augmented Reality",
+      "doi": "10.1145/3613904.3641901",
+      "publisher_link": "https://doi.org/10.1145/3613904.3641901",
+      "published_title": "Exploring the Opportunity of Augmented Reality (AR) in Supporting Older Adults to Explore and Learn Smartphone Applications",
+      "source": "https://api.crossref.org/works/10.1145/3613904.3641901"
+    },
+    {
+      "title_substring": "Empowering Autonomous Digital Learning",
+      "doi": "10.1145/3613905.3651133",
+      "publisher_link": "https://doi.org/10.1145/3613905.3651133",
+      "published_title": "Empowering Autonomous Digital Learning for Older Adults",
+      "source": "https://api.crossref.org/works/10.1145/3613905.3651133"
+    },
+    {
+      "title_substring": "Memory Reviver",
+      "doi": "10.1145/3654777.3676336",
+      "publisher_link": "https://doi.org/10.1145/3654777.3676336",
+      "published_title": "Memory Reviver: Supporting Photo-Collection Reminiscence for People with Visual Impairment via a Proactive Chatbot",
+      "source": "https://api.crossref.org/works/10.1145/3654777.3676336"
+    },
+    {
+      "title_substring": "Augmented Library",
+      "doi": "10.1145/3678698.3687174",
+      "publisher_link": "https://doi.org/10.1145/3678698.3687174",
+      "published_title": "Augmented Library: Toward Enriching Physical Library Experience Using HMD-Based Augmented Reality",
+      "source": "https://api.crossref.org/works/10.1145/3678698.3687174"
+    },
+    {
+      "title_substring": "Designing Loving-Kindness Meditation",
+      "doi": "10.1145/3581783.3612438",
+      "publisher_link": "https://doi.org/10.1145/3581783.3612438",
+      "published_title": "Designing Loving-Kindness Meditation in Virtual Reality for Long-Distance Romantic Relationships",
+      "source": "https://api.crossref.org/works/10.1145/3581783.3612438"
+    },
+    {
+      "title_substring": "Understanding Curators",
+      "doi": "10.1145/3597638.3608384",
+      "publisher_link": "https://doi.org/10.1145/3597638.3608384",
+      "published_title": "Understanding Curators' Practices and Challenge of Making Exhibitions More Accessible for People with Visual Impairments",
+      "source": "https://api.crossref.org/works/10.1145/3597638.3608384"
+    },
+    {
+      "title_substring": "Bridging the Generational Gap",
+      "doi": "10.1145/3544548.3581405",
+      "publisher_link": "https://doi.org/10.1145/3544548.3581405",
+      "published_title": "Bridging the Generational Gap: Exploring How Virtual Reality Supports Remote Communication Between Grandparents and Grandchildren",
+      "source": "https://api.crossref.org/works/10.1145/3544548.3581405"
+    },
+    {
+      "title_substring": "Synapse",
+      "doi": "10.1145/3550321",
+      "publisher_link": "https://doi.org/10.1145/3550321",
+      "published_title": "Synapse",
+      "source": "https://api.crossref.org/works/10.1145/3550321"
+    },
+    {
+      "title_substring": "Communication in Immersive Social Virtual Reality",
+      "doi": "10.1145/3565698.3565767",
+      "publisher_link": "https://doi.org/10.1145/3565698.3565767",
+      "published_title": "Communication in Immersive Social Virtual Reality: A Systematic Review of 10 Years’ Studies",
+      "source": "https://api.crossref.org/works/10.1145/3565698.3565767"
+    },
+    {
+      "title_substring": "I Used To Carry A Wallet",
+      "doi": "10.1145/3517428.3544820",
+      "publisher_link": "https://doi.org/10.1145/3517428.3544820",
+      "published_title": "“I Used To Carry A Wallet, Now I Just Need To Carry My Phone”: Understanding Current Banking Practices and Challenges Among Older Adults in China",
+      "source": "https://api.crossref.org/works/10.1145/3517428.3544820"
+    },
+    {
+      "title_substring": "Merging Results Is No Easy Task",
+      "doi": "10.1145/3491102.3517647",
+      "publisher_link": "https://doi.org/10.1145/3491102.3517647",
+      "published_title": "“Merging Results Is No Easy Task”: An International Survey Study of Collaborative Data Analysis Practices Among UX Practitioners",
+      "source": "https://api.crossref.org/works/10.1145/3491102.3517647"
+    },
+    {
+      "title_substring": "Too Old to Bank Digitally",
+      "doi": "10.1145/3461778.3462127",
+      "publisher_link": "https://doi.org/10.1145/3461778.3462127",
+      "published_title": "”Too old to bank digitally? ”: A Survey of Banking Practices and Challenges Among Older Adults in China",
+      "source": "https://api.crossref.org/works/10.1145/3461778.3462127"
+    },
+    {
+      "title_substring": "Learning the Relation between Interested Objects",
+      "doi": "10.1109/TMM.2020.3029882",
+      "publisher_link": "https://doi.org/10.1109/TMM.2020.3029882",
+      "published_title": "Learning the Relation Between Interested Objects and Aesthetic Region for Image Cropping",
+      "source": "https://api.crossref.org/works/10.1109/TMM.2020.3029882"
+    },
+    {
+      "title_substring": "Hidden Incidents of Pet Food",
+      "doi": null,
+      "publisher_link": "https://www.isea-symposium-archives.org/presentation/hidden-incidents-of-pet-food-portraying-taurine-deficiency-in-cats-presented-by-wu-jin-fei-wang-zhu-et-al/",
+      "published_title": "“Hidden Incidents of Pet Food”: Portraying Taurine Deficiency in Cats",
+      "source": "https://www.isea-symposium-archives.org/presentation/hidden-incidents-of-pet-food-portraying-taurine-deficiency-in-cats-presented-by-wu-jin-fei-wang-zhu-et-al/",
+      "note": "Official ISEA archive final paper; no DOI found.",
+      "official_pdf": "https://www.isea-symposium-archives.org/wp-content/uploads/2025/01/2024_Wu_Hidden_Incidents_of_Pet_Food_Portraying_Taurine.pdf"
+    }
+  ],
+  "excluded_unpublished": [
+    {
+      "title": "Modeling Trial-and-Error Navigation With a Sequential Decision Model of Information Scent",
+      "reason": "Only a preprint record was found, with no verified final publisher record."
+    }
+  ],
+  "deduplication_notes": [
+    "Memory Reviver preprint is represented by the existing UIST 2024 publication.",
+    "SynthLens is updated to its final TVCG 2025 issue rather than added again.",
+    "WWW Companion 2025 navigation and IJHCS 2025 UI transition papers have different contributions and evaluations and are retained as distinct publications.",
+    "ChineseCHI 2022 and CSCW 2025 VR reviews are distinct publications.",
+    "Sonic Stage is shown once as the accepted UIST 2026 version at the user's request; the superseded CHI EA 2026 record is retained here for provenance."
+  ],
+  "superseded_versions": [
+    {
+      "title": "Sonic Stage: Automatically Generating an Interactive Spatial Soundscape to Facilitate Dialogue Video Comprehension for Blind and Low Vision Viewers",
+      "authors": [
+        "Shuchang Xu",
+        "Xiaofu Jin",
+        "Gaurav Jain",
+        "Wenshuo Zhang",
+        "Huamin Qu",
+        "Brian A. Smith",
+        "Yukang Yan"
+      ],
+      "doi": "10.1145/3772363.3798425",
+      "publisher_url": "https://dl.acm.org/doi/10.1145/3772363.3798425",
+      "venue": "ACM CHI Conference on Human Factors in Computing Systems, Extended Abstracts (CHI EA '26)",
+      "year": 2026,
+      "publication_date_parts": [
+        2026,
+        4,
+        13
+      ],
+      "categories": [
+        "social"
+      ],
+      "image": "/images/sonic-chi-teaser.png",
+      "figure": {
+        "asset": "sonic-chi-teaser.png",
+        "dimensions_pixels": [
+          1772,
+          616
+        ],
+        "source_url": "https://raw.githubusercontent.com/shuchangxu/Sonic_Stage_Demo/e94d38c4f145eebbccb4346d9d08eb45d35904a8/static/images/1_Teaser.png",
+        "source_version": {
+          "git_commit": "e94d38c4f145eebbccb4346d9d08eb45d35904a8",
+          "date": "2026-04-08T20:31:42Z",
+          "project_page": "https://github.com/shuchangxu/Sonic_Stage_Demo/blob/e94d38c4f145eebbccb4346d9d08eb45d35904a8/index.html"
+        },
+        "figure": "Original CHI2026 author project teaser, no crop",
+        "note": "Pinned pre-UIST2026update author project; index explicitly labels CHI2026ExtendedAbstract and Paper/BibTeX DOI3772363.3798425. ExactPDFfigure identity not verified because no openCHIPDF found; image provenance establishes originalCHIprojectteaser, not laterUISTmodel."
+      },
+      "metadata_source": "https://api.crossref.org/works/10.1145/3772363.3798425"
+    }
+  ]
+}

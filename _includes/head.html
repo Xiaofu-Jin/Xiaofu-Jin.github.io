@@ -3,6 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ site.description | escape }}" />
 
 
   <!-- Enable responsiveness on mobile devices-->
@@ -14,10 +15,10 @@
   {% include google-analytics.html %}
 
   <!-- CSS -->
+  <link rel="preload" href="{{ "/assets/fonts/newsreader-latin.woff2" | relative_url }}" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 
-  {% include font-includes.html %}
 
   <!-- Icons -->
   {% include favicons.html %}

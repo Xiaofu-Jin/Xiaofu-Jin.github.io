@@ -2,12 +2,11 @@
 markdown:         kramdown
 highlighter:      rouge
 # Setup
-title:            <img src="/headshot.jpg" alt="Xiaofu Jin" />                
-
-tagline:          'Xiaofu Jin'
-description:       'researcher' #The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.
-url:              https://fongandrew.github.io
-baseurl:          '/'
+title:            Xiaofu Jin
+tagline:          'Humboldt Research Fellow'
+description:      'Xiaofu Jin is a Humboldt Research Fellow at the University of Stuttgart working on human understanding and modeling and on AI for human empowerment.'
+url:              https://xiaofu-jin.github.io
+baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
@@ -15,8 +14,8 @@ baseurl:          '/'
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           'Xiaofu Jin'
+  url:            https://scholar.google.com/citations?user=AuZH5MMAAAAJ
 
 paginate:         5
 # paginate_path:    '/page:num'
@@ -29,7 +28,7 @@ plugins:
 
 remote_theme: fongandrew/hydeout
 # Sidebar link settings
-sidebar_home_link:  true
+sidebar_home_link:  false
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path

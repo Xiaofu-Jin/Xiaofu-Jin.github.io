@@ -1,0 +1,27 @@
+[
+  {
+    "id": "understanding",
+    "title": "Human Understanding & Modeling",
+    "description": "Studies of people’s needs and practices, inference of cognitive states from gaze and handwriting, and computational models of cognition and behavior.",
+    "categories": [
+      { "id": "state-inference", "title": "Human State Inference" },
+      { "id": "cognitive-behavior-modeling", "title": "Computational Cognitive & Behavior Modeling" },
+      { "id": "needs-practices", "title": "Human Needs & Practices" }
+    ]
+  },
+  {
+    "id": "empowerment",
+    "title": "AI for Human Empowerment",
+    "description": "AI that makes media and interaction more accessible and explorable, guides people through unfamiliar technology, and supports experts in complex decisions.",
+    "categories": [
+      { "id": "accessible-interaction", "title": "Accessible Interaction & Exploration" },
+      { "id": "guidance-decision-support", "title": "Interactive Guidance & Decision Support" },
+      { "id": "human-centered-collaboration", "title": "Human-Centered AI Collaboration", "ongoing": true }
+    ]
+  },
+  {
+    "id": "all",
+    "title": "All",
+    "description": "All publications, including work on VR and AR, health sensing, computer vision, and media art beyond the two research areas."
+  }
+]

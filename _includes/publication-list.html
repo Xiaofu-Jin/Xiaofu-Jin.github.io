@@ -1,0 +1,36 @@
+{% comment %}
+  Publication list in the order of _data/publications.json, which is kept
+  newest first. Each year starts with a year heading (papers without a "year"
+  are grouped under "Earlier"); assets/js/research-topics.js shows the year
+  headings only in the "All" view.
+{% endcomment %}
+{% assign current_year = '' %}
+{% for paper in site.data.publications %}
+  {% assign paper_year = paper.year | default: 'Earlier' %}
+  {% if paper_year != current_year %}
+<h3 class="pub-year" data-pub-year>{{ paper_year }}</h3>
+    {% assign current_year = paper_year %}
+  {% endif %}
+<div class="pub"{% if paper.id %} id="pub-{{ paper.id }}"{% endif %} data-research-topic="{{ paper.topic | default: 'other' }}" data-research-category="{{ paper.category }}">
+  <div class="thumbnail">
+    <img src="{{ paper.image | relative_url }}" alt="{{ paper.image_alt | escape }}" />
+  </div>
+  <div class="publications">
+    <h4>{{ paper.title | escape }}</h4>
+    <div class="author">{{ paper.authors_html }}</div>
+    <div>
+      <span class="venue">{{ paper.venue | escape }}</span>
+      {% if paper.status %}<span class="publication-status">{{ paper.status }}</span>{% endif %}
+      {% if paper.award %}<span class="publication-award" role="img" aria-label="{{ paper.award | escape }}" title="{{ paper.award | escape }}">{% if paper.award contains 'Honorable Mention' %}🏅{% else %}🏆{% endif %}</span>{% endif %}
+    </div>
+    {% if paper.links.size > 0 %}
+    <div class="publication-links">
+      {% for link in paper.links %}
+        {% assign first_character = link.url | slice: 0 %}
+        <span class="venue"><a href="{% if first_character == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url | escape }}{% endif %}">{{ link.label }}</a></span>{% unless forloop.last %} · {% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}

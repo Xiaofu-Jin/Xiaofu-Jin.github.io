@@ -7,14 +7,17 @@ layout: default
 
   {{ content }}
 
-  {% for post in paginator.posts %}
+  {% assign publication_posts = paginator.posts | where: 'title', 'Publications' %}
+  {% comment %}Chained filters: GitHub Pages' Jekyll 3.10 does not support "and" in where_exp.{% endcomment %}
+  {% assign other_posts = paginator.posts | where_exp: 'post', "post.title != 'Publications'" | where_exp: 'post', "post.title != 'About'" %}
+  {% assign homepage_posts = publication_posts | concat: other_posts %}
+  {% for post in homepage_posts %}
   <article class="post-body">
     <h2 class="post-title">
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
     </h2>
-    <br />
     <!--{% include post-meta.html post=post %}-->
 
     {% if post.excerpt %}

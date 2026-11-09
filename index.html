@@ -2,3 +2,35 @@
 layout: index
 title: Home
 ---
+{% comment %}
+  The About post is cut into three pieces by HTML comments: the intro
+  paragraphs, then the research map (after <!--more-->), which sit together
+  in a bracket-framed .research-frame (closed by <!--/research-->), then the
+  rest. The words HCI, cognitive science and AI in the intro are styled by
+  .intro-field.
+{% endcomment %}
+{% assign about_post = site.posts | where: 'title', 'About' | first %}
+{% assign about_parts = about_post.content | split: '<!--/research-->' %}
+{% assign framed_parts = about_parts[0] | split: '<!--more-->' %}
+<section class="research-overview" aria-label="Introduction">
+  <div class="research-frame">
+    <div class="intro">
+      {{ framed_parts[0] }}
+    </div>
+    {{ framed_parts[1] }}
+  </div>
+  {{ about_parts[1] }}
+</section>
+{% comment %}
+  News is hidden for now. To show it again, remove the comment tags around
+  this section; the items live in _data/news.json.
+
+<section class="site-news" id="news" aria-labelledby="news-title">
+  <h2 id="news-title">News</h2>
+  <ul>
+    {% for item in site.data.news %}
+      <li><strong>{{ item.date }}</strong> — {{ item.text | escape }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endcomment %}

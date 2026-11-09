@@ -2,6 +2,18 @@
 //
 // Headings, body text, lists, and other misc typographic elements.
 
+// Newsreader (SIL Open Font License, see assets/fonts/OFL.txt), served from
+// this site so it also loads where Google Fonts is blocked. Latin subset;
+// other characters fall back to Georgia.
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../fonts/newsreader-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 h1,
 h2,
 h3,
@@ -10,7 +22,7 @@ h5,
 h6,
 .site-title {
   color: $heading-color;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
   margin-bottom: $heading-spacing;
   text-rendering: optimizeLegibility;
@@ -21,8 +33,11 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-family: $serif-font-family;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-top: 1.5rem;
 }
 
 h3 {
@@ -42,9 +57,10 @@ h6 {
 }
 
 p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   margin-top: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 strong {
@@ -142,4 +158,10 @@ a svg,
 
 .icon {
   vertical-align: middle;
+}
+
+// People's names (professors, advisors) in italics: mark them with
+// class="person", as in the About and Education posts.
+.person {
+  font-style: italic;
 }

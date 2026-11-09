@@ -1,0 +1,80 @@
+{%- comment -%}
+  Research structure diagram for the About section.
+  Areas and their categories come from _data/research_topics.json. Under
+  each category it lists the venues of the papers in _data/publications.json
+  whose "category" matches (newest first), with award icons. Papers of the
+  same venue share one chip ("ASSETS’23, ’22"), except that an awarded paper
+  keeps a chip of its own so the award stays unambiguous. A paper with
+  "hide_in_map": true is left out of the map (it stays in the publication
+  list). Hovering a venue shows its paper titles. Set link_venues below to
+  true to make each venue link to its (newest) paper in the publication list
+  again. Categories with "ongoing": true get an "Ongoing" tag and a dashed
+  branch. Each area's colors come from .research-area--<area id> in
+  _sass/hydeout/_research.scss.
+{%- endcomment -%}
+{%- assign link_venues = false -%}
+{%- assign areas = site.data.research_topics | where_exp: 'topic', 'topic.categories' -%}
+<figure class="research-map">
+  <div class="research-map-body">
+  {%- for area in areas %}
+    <section class="research-area research-area--{{ area.id }}" aria-labelledby="area-{{ area.id }}-title">
+      <div class="research-area-header">
+        <span class="research-area-index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <h3 id="area-{{ area.id }}-title">{{ area.title }}</h3>
+      </div>
+      <ul class="research-categories">
+        {%- for category in area.categories -%}
+        {%- assign category_papers = site.data.publications | where: 'category', category.id | where_exp: 'paper', 'paper.hide_in_map != true' -%}
+        {%- comment -%} One key per chip, in order of first appearance: the venue without its year, or venue#id for an awarded paper {%- endcomment -%}
+        {%- assign chip_keys = '|' -%}
+        {%- for paper in category_papers -%}
+          {%- assign venue_base = paper.venue_short | default: 'Paper' | split: '’' | first -%}
+          {%- if paper.award -%}{%- assign chip_key = venue_base | append: '#' | append: paper.id -%}{%- else -%}{%- assign chip_key = venue_base -%}{%- endif -%}
+          {%- assign chip_probe = '|' | append: chip_key | append: '|' -%}
+          {%- unless chip_keys contains chip_probe -%}{%- assign chip_keys = chip_keys | append: chip_key | append: '|' -%}{%- endunless -%}
+        {%- endfor -%}
+        {%- assign chip_keys = chip_keys | split: '|' %}
+        <li{% if category.ongoing %} class="is-ongoing"{% endif %}>
+          <span class="research-category-title">{{ category.title }}</span>
+          {%- if category_papers.size > 0 or category.ongoing %}
+          <span class="research-venues">
+            {%- for chip_key in chip_keys -%}
+            {%- if chip_key == '' -%}{%- continue -%}{%- endif -%}
+            {%- assign chip_label = '' -%}
+            {%- assign chip_title = '' -%}
+            {%- assign chip_award = '' -%}
+            {%- assign chip_target = '' -%}
+            {%- for paper in category_papers -%}
+              {%- assign venue_label = paper.venue_short | default: 'Paper' -%}
+              {%- assign venue_parts = venue_label | split: '’' -%}
+              {%- if paper.award -%}{%- assign paper_key = venue_parts[0] | append: '#' | append: paper.id -%}{%- else -%}{%- assign paper_key = venue_parts[0] -%}{%- endif -%}
+              {%- if paper_key == chip_key -%}
+                {%- if chip_label == '' -%}
+                  {%- assign chip_label = venue_label -%}
+                  {%- assign chip_target = paper.id -%}
+                {%- elsif venue_parts.size > 1 -%}
+                  {%- assign chip_label = chip_label | append: ', ’' | append: venue_parts[1] -%}
+                {%- endif -%}
+                {%- if chip_title != '' -%}{%- assign chip_title = chip_title | append: '&#10;' -%}{%- endif -%}
+                {%- assign chip_title = chip_title | append: venue_label | append: ': ' | append: paper.title -%}
+                {%- if paper.award -%}
+                  {%- assign chip_title = chip_title | append: ' — ' | append: paper.award -%}
+                  {%- capture chip_award -%}<span class="research-venue-award" role="img" aria-label="{{ paper.award | escape }}">{% if paper.award contains 'Honorable Mention' %}🏅{% else %}🏆{% endif %}</span>{%- endcapture -%}
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor %}
+            {% if link_venues %}<a class="research-venue" href="{{ '/' | relative_url }}#pub-{{ chip_target }}" title="{{ chip_title | escape | replace: '&amp;#10;', '&#10;' }}">{{ chip_label }}{{ chip_award }}</a>{% else %}<span class="research-venue" title="{{ chip_title | escape | replace: '&amp;#10;', '&#10;' }}">{{ chip_label }}{{ chip_award }}</span>{% endif %}
+            {%- endfor %}
+            {%- if category.ongoing %}
+            <span class="research-category-status">Ongoing</span>
+            {%- endif %}
+          </span>
+          {%- endif %}
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+  {%- endfor %}
+  </div>
+  <figcaption>🏆 Best Paper Award · 🏅 Honorable Mention Award{% if link_venues %} · Each venue links to its paper below.{% endif %}</figcaption>
+</figure>

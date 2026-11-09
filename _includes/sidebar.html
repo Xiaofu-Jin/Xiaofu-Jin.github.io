@@ -5,11 +5,14 @@
         {% unless page.url == "/" %}
       
         {% endunless %}
-        {{ site.title }}
+        <img src="{{ "/headshot.jpg" | relative_url }}" alt="{{ site.author.name }}" />
       </a>
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
-    <h1 class="site-title">{{site.tagline}}</h1>
-    <p class="lead">{{ site.description }}</p>
+    <h1 class="site-title">{{ site.title }}</h1>
+    <p class="lead sidebar-position">
+      <img class="sidebar-position__emblem" src="{{ '/images/humboldt-emblem.svg' | relative_url }}" alt="" width="225" height="241" />
+      <span>{{ site.tagline }}</span>
+    </p>
   </header>
   {% include sidebar-nav-links.html %}
 
@@ -18,5 +21,5 @@
   {% endif %}
 
   {% include sidebar-icon-links.html %}
-  {% include copyright.html %}
+  {% comment %}Copyright line hidden for now: {% include copyright.html %}{% endcomment %}
 </div>

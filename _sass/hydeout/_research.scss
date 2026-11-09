@@ -1,0 +1,741 @@
+// Accent colours of the intro, taken from the research map so the text and
+// the map tell the same story: jade green for Human Understanding & Modeling
+// (the left panel), lavender purple for AI for Human Empowerment (the right
+// panel). The text uses each panel's chip text colour and the highlight band
+// its accent colour. The other two greens are the Humboldt Foundation's own:
+// its deep green for text and its mint for highlights.
+$understanding-ink: #0e623d;
+$understanding-accent: #2c8057;
+$empowerment-ink: #584682;
+$empowerment-accent: #7660a3;
+$humboldt-green: #025f2c;
+$humboldt-mint: #81eea9;
+
+// Links without an underline; on hover a thin underline in the link's own
+// colour appears.
+.research-overview {
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+  }
+
+  .intro strong {
+    font-weight: 600;
+  }
+
+  // Highlighted phrases: a coloured band across the lower half of the words,
+  // the way the Humboldt Foundation highlights words on its own website.
+  // box-decoration-break keeps the band whole where a phrase wraps. Mark a
+  // phrase (or a link around a <strong>) with class="intro-focus"; it is
+  // purple, and jade green with class="intro-understanding" as well.
+  .intro .intro-title,
+  .intro .intro-focus {
+    margin: 0 -0.12em;
+    padding: 0 0.12em;
+    background-position: 0 100%;
+    background-size: 100% 0.45em;
+    background-repeat: no-repeat;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  // "Humboldt Research Fellow" in the Foundation's deep green over its mint
+  .intro .intro-title {
+    color: $humboldt-green;
+    background-image: linear-gradient(rgba($humboldt-mint, 0.6), rgba($humboldt-mint, 0.6));
+  }
+
+  // Labs and research directions: purple (empowerment) by default ...
+  .intro .intro-focus {
+    color: $empowerment-ink;
+    font-weight: 600;
+    background-image: linear-gradient(rgba($empowerment-accent, 0.22), rgba($empowerment-accent, 0.22));
+  }
+
+  // ... jade green for human understanding and modeling, which also colours the
+  // name of Prof. Oulasvirta, whose lab works on it
+  .intro .intro-understanding {
+    color: $understanding-ink;
+  }
+
+  .intro .intro-focus.intro-understanding {
+    background-image: linear-gradient(rgba($understanding-accent, 0.22), rgba($understanding-accent, 0.22));
+  }
+
+  // Closing invitation to get in touch, in the empowerment purple, with its
+  // email link underlined so it reads as a link
+  .contact-note {
+    color: $empowerment-ink;
+    font-weight: 500;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: rgba($empowerment-accent, 0.5);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.availability-note {
+  color: $link-color;
+}
+
+// Large serif quotation marks, “ and ”, framing the intro and the research
+// map. The framed block fills at least the rest of the first screen, with
+// its content centred between the marks, so when the page opens the opening
+// mark sits at the top of the screen and the closing mark at the bottom.
+// Where the content is taller than the screen (phones, short laptop
+// screens), the marks are sticky: the opening one stays at the top of the
+// screen and the closing one at the bottom while the block is being read,
+// until its ends scroll past. The marks hang in the column's padding, beside
+// the text. Each mark's box is the height of its visible glyph; the rest of
+// its line overflows, empty. The offsets below follow the column padding in
+// _layout.scss (3.5rem, 3rem from 960 to 1199px, 2rem below 960px).
+.research-frame {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 3.5rem);
+  min-height: calc(100svh - 3.5rem);
+  margin: 0 0 2.4rem;
+
+  // Auto margins centre the content between the marks
+  > .intro {
+    margin-top: auto;
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .research-map {
+    margin-bottom: auto;
+  }
+
+  &::before,
+  &::after {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+    flex: none;
+    height: 2.15rem;
+    font-family: $serif-font-family;
+    font-size: 4.6rem;
+    font-weight: 500;
+    line-height: 1;
+    color: $sidebar-bg-color; // the sidebar's dark aubergine
+    pointer-events: none;
+  }
+
+  // Up into the column's top padding: its glyph starts about 1.3rem below
+  // the top of the screen
+  &::before {
+    content: '\201C';
+    top: 1.3rem;
+    align-self: flex-start;
+    margin: -2.2rem 0 0.3rem -2.35rem;
+  }
+
+  // At the bottom of the block: its glyph ends about 1.3rem above the bottom
+  // of the screen (the glyph sits in the upper part of its box)
+  &::after {
+    content: '\201D';
+    bottom: 0.25rem;
+    align-self: flex-end;
+    margin: 1.4rem -2.35rem 0.25rem 0;
+  }
+}
+
+// Intro: in "combines HCI, cognitive science, and AI" each field name sits in
+// the middle of a faint ellipse. The ellipses are wide enough that all three
+// overlap behind "cognitive science" (a Venn diagram laid out in a row) and
+// flat enough to stay off the paragraph above. In the About post the words
+// are wrapped in <span class="intro-field intro-field--hci|cogsci|ai">. Sizes
+// are in em, so the shapes scale with the text.
+.intro {
+  overflow-x: clip;
+
+  > p {
+    position: relative;
+    isolation: isolate;
+  }
+}
+
+.intro-field {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    // A little below the words' middle, leaving more room above
+    top: calc(50% + 0.5em);
+    left: 50%;
+    width: 14em;
+    height: 3.4em;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+}
+
+// Soft pastel washes, mint (HCI), sky blue (cognitive science) and lilac
+// (AI), between the jade and the lavender of the research map. They are only
+// a light background for the sentence: no outline, and each fades out
+// towards its edge, so neighbouring washes blend into aqua and periwinkle
+// without drawing the eye away from the text.
+@mixin intro-tint($color) {
+  background-image: radial-gradient(closest-side, rgba($color, 0.5), rgba($color, 0.32) 55%, rgba($color, 0));
+}
+
+.intro-field--hci::before {
+  @include intro-tint(#b4f0d2);
+}
+
+.intro-field--cogsci {
+  white-space: nowrap;
+
+  &::before {
+    @include intro-tint(#bde5fb);
+  }
+}
+
+.intro-field--ai::before {
+  @include intro-tint(#dcd1fb);
+}
+
+// Phones: the ellipses would be wider than much of the narrow column.
+@media (max-width: 540px) {
+  .intro-field::before {
+    display: none;
+  }
+}
+
+// Research structure diagram in the About section: one softly tinted panel
+// per area, the two side by side (stacked on phones), each listing its
+// categories with the venues of their papers under each category title.
+.research-map {
+  // Above the intro's circles: if a short paragraph lets them hang this far,
+  // they tuck behind the map instead of sitting on it
+  position: relative;
+  z-index: 1;
+  margin: 1.5rem 0 2rem;
+
+  figcaption {
+    margin-top: 0.65rem;
+    color: #8a857f;
+    font-size: 0.74rem;
+    line-height: 1.6;
+  }
+}
+
+.research-map-body {
+  display: grid;
+  gap: 0.6rem;
+}
+
+@media (min-width: 640px) {
+  .research-map-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+// Each area sets its own palette; an area without one stays neutral.
+.research-area {
+  --area-bg: #f5f4f1;
+  --area-border: #ebe8e2;
+  --area-accent: #77716b;
+  --area-line: #d9d4cc;
+  --area-chip-border: #e4e0d9;
+  --area-chip-text: #5c5650;
+
+  padding: 0.9rem 0.95rem 0.95rem;
+  border: 1px solid var(--area-border);
+  border-radius: 14px;
+  background: var(--area-bg);
+}
+
+// Jade: the empowerment lavender below with its hue turned to green (same
+// OKLCH lightness and chroma for each role), so the two panels pair evenly
+.research-area--understanding,
+.research-category-options--understanding {
+  --area-bg: #eef6f1;
+  --area-border: #d7e9de;
+  --area-accent: #2c8057;
+  --area-line: #b6d7c3;
+  --area-chip-border: #c4dfce;
+  --area-chip-text: #0e623d;
+}
+
+.research-area--empowerment,
+.research-category-options--empowerment {
+  --area-bg: #f5f2f9;
+  --area-border: #e7e0f1;
+  --area-accent: #7660a3;
+  --area-line: #d3c7e6;
+  --area-chip-border: #dcd2ec;
+  --area-chip-text: #584682;
+}
+
+.research-area-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+
+  // Zero basis: on phones the title shares the first line with the number
+  // and wraps inside it, instead of dropping below it.
+  h3 {
+    flex: 1 1 0%;
+    min-width: 0;
+    margin: 0;
+    color: $body-color;
+    font-family: $serif-font-family;
+    font-size: 1.14rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    line-height: 1.35;
+  }
+}
+
+.research-area-index {
+  flex: none;
+  width: 1.3rem;
+  color: var(--area-accent);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+// Tree lines: a trunk under the area number with a branch to each category.
+// Each category title sits on a 1.4rem line with its venue chips below, and
+// the branch meets the middle of the title's first line.
+.research-categories {
+  margin: 0.7rem 0 0;
+  padding: 0 0 0 0.55rem;
+  list-style: none;
+
+  li {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    align-items: start;
+    margin: 0;
+    // 0.55rem + 1.5rem: titles start where the area title does
+    padding: 0.4rem 0 0.4rem 1.5rem;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      border-color: var(--area-line);
+      border-style: solid;
+      border-width: 0;
+    }
+
+    &::before {
+      top: 0;
+      bottom: 0;
+      border-left-width: 1px;
+    }
+
+    // li top padding + half of the 1.4rem line
+    &::after {
+      top: 1.1rem;
+      width: 1.05rem;
+      border-top-width: 1px;
+    }
+
+    &:last-child::before {
+      bottom: auto;
+      height: 1.1rem;
+    }
+  }
+}
+
+.research-category-title {
+  color: $body-color;
+  font-size: 0.86rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+}
+
+.research-venues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.research-map .research-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--area-chip-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--area-chip-text);
+  font-size: 0.72rem;
+  line-height: calc(1.4rem - 2px);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: default;
+}
+
+// Only when venues link to their papers (link_venues in research-map.html)
+.research-map a.research-venue {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: var(--area-accent);
+    color: var(--area-accent);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--area-accent);
+    outline-offset: 2px;
+  }
+}
+
+.research-venue-award {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+// Ongoing directions: an "Ongoing" tag after the venues, and a dashed
+// branch leading to the category.
+.research-category-status {
+  padding: 0 0.45rem;
+  border: 1px dashed var(--area-accent);
+  border-radius: 999px;
+  color: var(--area-accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: calc(1.4rem - 2px);
+  white-space: nowrap;
+}
+
+.research-categories li.is-ongoing::before,
+.research-categories li.is-ongoing::after {
+  border-style: dashed;
+}
+
+// Phones: slightly tighter panels
+@media (max-width: 560px) {
+  .research-area {
+    padding: 0.85rem 0.85rem 0.9rem;
+  }
+}
+
+// Position line in the sidebar: the Humboldt Foundation emblem (the green
+// portrait roundel from its logo, images/humboldt-emblem.svg) beside the
+// title. It sits on the line's centre, so it stays aligned whether the
+// sidebar is centred (desktop) or left-aligned beside the photo (phones).
+#sidebar .sidebar-position {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  .sidebar-position__emblem {
+    flex: none;
+    width: auto;
+    height: 2rem;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  #sidebar .sidebar-position {
+    justify-content: center;
+  }
+}
+
+// With News hidden, the publications follow the intro directly: keep a
+// divider and the breathing room the News section used to provide.
+// Small desktops (3rem top and 2.5rem side padding) and narrow screens,
+// where the block starts below the sidebar (its height comes from
+// assets/js/sidebar-height.js; 14rem is a fallback) and the side padding is
+// 1.2–1.4rem
+@media (min-width: 960px) and (max-width: 1199px) {
+  .research-frame {
+    min-height: calc(100vh - 3rem);
+    min-height: calc(100svh - 3rem);
+
+    &::before { margin: -1.7rem 0 0.3rem -2rem; }
+    &::after { margin-right: -2rem; }
+  }
+}
+
+@media (max-width: 959px) {
+  .research-frame {
+    min-height: calc(100vh - var(--sidebar-height, 14rem) - 2rem);
+    min-height: calc(100svh - var(--sidebar-height, 14rem) - 2rem);
+
+    &::before,
+    &::after {
+      height: 1.15rem;
+      font-size: 2.4rem;
+    }
+
+    &::before { top: 0.7rem; margin: -1.5rem 0 0.2rem -1.15rem; }
+    &::after { bottom: 0.4rem; margin: 0.9rem -1.15rem 0.4rem 0; }
+  }
+}
+
+@media print {
+  .research-frame {
+    min-height: 0;
+
+    &::before,
+    &::after { display: none; }
+  }
+}
+
+.research-overview + .post-body {
+  margin-top: 2.7rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid $border-color;
+}
+
+// News section (hidden for now, see index.html)
+.site-news {
+  margin: 2rem 0 2.7rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  h2 {
+    margin: 0 0 0.65rem;
+    font-size: 1.55rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 0.4rem 0;
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  strong {
+    margin-right: 0.5rem;
+    color: #77716b;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+// Fragment targets for /#research-<id>; the margin keeps the
+// "Publications" heading in view after the jump.
+.research-topic-anchors span {
+  display: block;
+  scroll-margin-top: 4.5rem;
+}
+
+.research-topic-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 0.55fr);
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.research-topic-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 0.85rem 0.5rem;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+  color: #706b66;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #aeafb3;
+    outline-offset: 2px;
+  }
+
+  &[aria-current='true'] {
+    border-bottom-color: $link-color;
+    color: $link-color;
+    font-weight: 600;
+  }
+}
+
+// Second level: the selected area's categories, as in the research map,
+// coloured like that area's panel
+.research-category-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.1rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.research-category-option {
+  padding: 0.28rem 0.8rem;
+  border: 1px solid var(--area-chip-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--area-chip-text);
+  font-size: 0.78rem;
+  line-height: 1.45;
+
+  &:hover,
+  &:focus {
+    border-color: var(--area-accent);
+    color: var(--area-accent);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--area-accent);
+    outline-offset: 2px;
+  }
+
+  &[aria-current='true'] {
+    border-color: var(--area-accent);
+    background: var(--area-bg);
+    color: var(--area-accent);
+    font-weight: 600;
+  }
+}
+
+.research-topic-summary {
+  margin: 1rem 0 1.5rem;
+  color: #77716b;
+  font-size: 0.83rem;
+  line-height: 1.65;
+}
+
+// Year headings in the "All" publication list
+.pub-year {
+  margin: 2.6rem 0 0.4rem;
+  color: $body-color;
+  font-family: $serif-font-family;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.research-topic-summary + .pub-year {
+  margin-top: 0.4rem;
+}
+
+.pub[hidden] {
+  display: none;
+}
+
+// Leave some room above a paper reached via a venue link (#pub-<id>)
+.pub {
+  scroll-margin-top: 1.5rem;
+}
+
+.publication-status {
+  display: inline-block;
+  padding: 0.08rem 0.4rem;
+  margin-left: 0.25rem;
+  border: 1px solid #d7d2ca;
+  border-radius: 3px;
+  color: #77716b;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.publication-award {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.publication-links {
+  margin-top: 0.6rem;
+
+  a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: rgba(139, 92, 246, 0.75);
+      color: #5b21b6;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .research-topic-options {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .research-topic-option {
+    justify-content: flex-start;
+    padding: 0.7rem 0;
+    text-align: left;
+  }
+}
+
+// A paper reached from a venue in the research map (#pub-<id>) gets a light
+// purple frame. The frame sits inside the paper's own vertical padding, so it
+// never covers the divider lines between papers.
+.pub {
+  position: relative;
+  isolation: isolate;
+
+  &:target::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0.6rem;
+    right: -0.75rem;
+    bottom: 0.6rem;
+    left: -0.75rem;
+    border: 1px solid #d8cbee;
+    border-radius: 6px;
+    background: #f7f3fc;
+  }
+}
