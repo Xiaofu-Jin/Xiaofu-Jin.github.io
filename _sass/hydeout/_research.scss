@@ -14,6 +14,24 @@ $humboldt-mint: #81eea9;
 // Links without an underline; on hover a thin underline in the link's own
 // colour appears.
 .research-overview {
+  // Justified, with hyphenation so the word gaps stay even; phones are too
+  // narrow for that and keep ragged-right text (see the media query below)
+  > p,
+  .intro > p {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 640px) {
+    > p,
+    .intro > p {
+      text-align: left;
+    }
+  }
+
   a {
     text-decoration: none;
 
@@ -712,32 +730,61 @@ $humboldt-mint: #81eea9;
   white-space: nowrap;
 }
 
+// Award as a small gold tag with its name, under the venue
 .publication-award {
-  display: inline-block;
-  margin-left: 0.4rem;
-  font-size: 1.15rem;
-  line-height: 1.4;
-  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid #efdca8;
+  border-radius: 999px;
+  background: #fdf6e3;
+  color: #7a5200;
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.55;
 }
 
+// Paper / Project / Video … each with an inline icon (publication-link.html)
 .publication-links {
-  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.15rem;
+  margin-top: 0.75rem;
+}
 
-  a {
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    font-size: 0.76rem;
-    font-weight: 500;
-    letter-spacing: 0.04em;
+.publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: rgba(139, 92, 246, 0.75);
+    color: #5b21b6;
     text-decoration: none;
-
-    &:hover,
-    &:focus {
-      border-bottom-color: rgba(139, 92, 246, 0.75);
-      color: #5b21b6;
-      text-decoration: none;
-    }
   }
+
+  &:focus-visible {
+    outline: 2px solid #aeafb3;
+    outline-offset: 2px;
+  }
+}
+
+// Outline icons: override the theme's `a svg { fill }` from _type.scss
+.publication-link .publication-link__icon {
+  flex: none;
+  width: 1.05em;
+  height: 1.05em;
+  fill: none;
+  stroke: currentColor;
 }
 
 @media (max-width: 480px) {
@@ -756,14 +803,14 @@ $humboldt-mint: #81eea9;
   }
 }
 
-// A paper reached from a venue in the research map (#pub-<id>) gets a light
-// purple frame. The frame sits inside the paper's own vertical padding, so it
-// never covers the divider lines between papers.
+// A soft warm card behind a paper on hover, and a light purple frame for a
+// paper reached from a venue in the research map (#pub-<id>). Both sit inside
+// the paper's own vertical padding, so they never cover the divider lines.
 .pub {
   position: relative;
   isolation: isolate;
 
-  &:target::before {
+  &::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -771,8 +818,40 @@ $humboldt-mint: #81eea9;
     right: -0.75rem;
     bottom: 0.6rem;
     left: -0.75rem;
-    border: 1px solid #d8cbee;
-    border-radius: 6px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    pointer-events: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .thumbnail {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  @media (hover: hover) {
+    &:hover::before {
+      background: #f3f0eb;
+    }
+
+    &:hover .thumbnail {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(35, 31, 32, 0.08);
+    }
+  }
+
+  &:target::before {
+    border-color: #d8cbee;
     background: #f7f3fc;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pub::before,
+  .pub .thumbnail {
+    transition: none;
+  }
+
+  .pub:hover .thumbnail {
+    transform: none;
   }
 }

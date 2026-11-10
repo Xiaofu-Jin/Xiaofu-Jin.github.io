@@ -1,0 +1,34 @@
+{%- comment -%}
+  One publication link with an inline icon (Lucide-style strokes, so no icon
+  font has to load). The icon is chosen from the label in
+  _data/publications.json; unknown labels get a plain link icon. Labels such
+  as "Video(Youtube)" or "CODE" are shown as "Video" and "Code".
+  Usage: include publication-link.html url=link.url label=link.label
+{%- endcomment -%}
+{%- assign label = include.label | default: 'Link' -%}
+{%- assign key = label | downcase -%}
+{%- assign text = label -%}
+{%- if key contains 'video' or key contains 'youtube' -%}
+  {%- assign kind = 'video' -%}{%- assign text = 'Video' -%}
+{%- elsif key contains 'code' or key contains 'github' -%}
+  {%- assign kind = 'code' -%}{%- assign text = 'Code' -%}
+{%- elsif key contains 'project' or key contains 'demo' or key contains 'website' -%}
+  {%- assign kind = 'project' -%}
+{%- elsif key contains 'paper' or key contains 'pdf' or key contains 'arxiv' or key contains 'doi' -%}
+  {%- assign kind = 'paper' -%}
+{%- elsif key contains 'survey' or key contains 'question' or key contains 'data' or key contains 'supplement' -%}
+  {%- assign kind = 'list' -%}
+{%- else -%}
+  {%- assign kind = 'link' -%}
+{%- endif -%}
+{%- assign first_character = include.url | slice: 0 -%}
+<a class="publication-link" href="{% if first_character == '/' %}{{ include.url | relative_url }}{% else %}{{ include.url | escape }}{% endif %}"><svg class="publication-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  {%- case kind -%}
+  {%- when 'video' -%}<circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+  {%- when 'code' -%}<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+  {%- when 'project' -%}<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+  {%- when 'paper' -%}<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>
+  {%- when 'list' -%}<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>
+  {%- else -%}<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+  {%- endcase -%}
+</svg><span>{{ text }}</span></a>

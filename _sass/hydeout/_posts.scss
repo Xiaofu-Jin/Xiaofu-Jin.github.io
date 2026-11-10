@@ -145,11 +145,18 @@ button.disqus-load {
       color: $body-color;
     }
 
+    // Justified like the About text, but never hyphenated (names); phones
+    // keep ragged-right lines
     .author {
       margin-bottom: 0.5rem;
       color: #6b6763;
       font-size: 0.86rem;
       line-height: 1.65;
+      text-align: justify;
+
+      @media (max-width: 640px) {
+        text-align: left;
+      }
 
       strong, b {
         color: $body-color;

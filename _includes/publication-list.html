@@ -21,14 +21,11 @@
     <div>
       <span class="venue">{{ paper.venue | escape }}</span>
       {% if paper.status %}<span class="publication-status">{{ paper.status }}</span>{% endif %}
-      {% if paper.award %}<span class="publication-award" role="img" aria-label="{{ paper.award | escape }}" title="{{ paper.award | escape }}">{% if paper.award contains 'Honorable Mention' %}🏅{% else %}🏆{% endif %}</span>{% endif %}
     </div>
+    {% if paper.award %}<div class="publication-award"><span aria-hidden="true">{% if paper.award contains 'Honorable Mention' %}🏅{% else %}🏆{% endif %}</span> {{ paper.award | escape }}</div>{% endif %}
     {% if paper.links.size > 0 %}
     <div class="publication-links">
-      {% for link in paper.links %}
-        {% assign first_character = link.url | slice: 0 %}
-        <span class="venue"><a href="{% if first_character == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url | escape }}{% endif %}">{{ link.label }}</a></span>{% unless forloop.last %} · {% endunless %}
-      {% endfor %}
+      {% for link in paper.links %}{% include publication-link.html url=link.url label=link.label %}{% endfor %}
     </div>
     {% endif %}
   </div>
