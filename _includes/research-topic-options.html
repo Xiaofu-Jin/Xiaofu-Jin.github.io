@@ -10,9 +10,10 @@
 <div class="research-topic-anchors">
   {% for topic in site.data.research_topics %}<span id="research-{{ topic.id }}"></span>{% for category in topic.categories %}<span id="research-{{ category.id }}"></span>{% endfor %}{% endfor %}
 </div>
+<p class="research-topic-label" aria-hidden="true">Browse by research area</p>
 <nav class="research-topic-options" aria-label="Filter publications by research area">
   {% for topic in site.data.research_topics %}
-    <a class="research-topic-option" href="{{ '/' | relative_url }}#research-{{ topic.id }}" data-topic="{{ topic.id }}" data-description="{{ topic.description | escape }}"{% if selected_topic == topic.id %} aria-current="true"{% endif %}>
+    <a class="research-topic-option research-topic-option--{{ topic.id }}" href="{{ '/' | relative_url }}#research-{{ topic.id }}" data-topic="{{ topic.id }}" data-description="{{ topic.description | escape }}"{% if selected_topic == topic.id %} aria-current="true"{% endif %}>
       <span>{{ topic.title }}</span>
     </a>
   {% endfor %}
@@ -23,7 +24,7 @@
   {% for category in topic.categories %}
   <a class="research-category-option" href="{{ '/' | relative_url }}#research-{{ category.id }}" data-area="{{ topic.id }}" data-category="{{ category.id }}">{{ category.title }}</a>
   {% endfor %}
-  <a class="research-category-option" href="{{ '/' | relative_url }}#research-{{ topic.id }}" data-area="{{ topic.id }}" data-category="">All categories</a>
+  <a class="research-category-option" href="{{ '/' | relative_url }}#research-{{ topic.id }}" data-area="{{ topic.id }}" data-category="">All</a>
 </nav>
   {% endif %}
 {% endfor %}

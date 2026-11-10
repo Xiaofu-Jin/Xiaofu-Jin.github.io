@@ -19,7 +19,6 @@
   {%- for area in areas %}
     <section class="research-area research-area--{{ area.id }}" aria-labelledby="area-{{ area.id }}-title">
       <div class="research-area-header">
-        <span class="research-area-index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
         <h3 id="area-{{ area.id }}-title">{{ area.title }}</h3>
       </div>
       <ul class="research-categories">

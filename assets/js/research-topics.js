@@ -35,7 +35,7 @@ document.querySelectorAll('[data-research-browser]').forEach((browser) => {
       else paper.hidden = paper.dataset.researchTopic !== areaId;
     });
     yearHeadings.forEach((heading) => { heading.hidden = areaId !== 'all'; });
-    summary.textContent = area.dataset.description;
+    if (summary) summary.textContent = area.dataset.description;
   }
 
   function selectFromLocation() {
